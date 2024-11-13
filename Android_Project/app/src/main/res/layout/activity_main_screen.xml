@@ -1,0 +1,60 @@
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <!-- Thanh Tìm Kiếm -->
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:elevation="8dp"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.SearchView
+            android:id="@+id/searchView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:queryHint="Tìm kiếm tác phẩm"
+            android:background="@android:color/white"
+            android:textColor="@android:color/black"/>
+    </androidx.cardview.widget.CardView>
+
+    <!-- RecyclerView để hiển thị ảnh đã đăng tải -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/artworkRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="80dp"
+        android:layout_marginBottom="80dp"
+        android:padding="8dp"
+        android:clipToPadding="false" />
+
+    <!-- Nút Đăng Tải Ảnh (Floating Action Button) ở giữa -->
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/btnUpload"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center_horizontal"
+        android:layout_marginBottom="28dp"
+        android:contentDescription="Upload"
+        android:src="@drawable/add_images"
+        app:elevation="8dp"
+        app:maxImageSize="40dp" />
+
+    <!-- Thanh Điều Hướng Dưới -->
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigation"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_gravity="bottom"
+        android:background="#3E6AA6"
+        app:itemIconSize="25sp"
+        app:itemIconTint="@android:color/white"
+        app:itemPaddingBottom="10dp"
+        app:itemPaddingTop="10dp"
+        app:itemTextColor="@android:color/white"
+        app:menu="@menu/bottom_nav_menu" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

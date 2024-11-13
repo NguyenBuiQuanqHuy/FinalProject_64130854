@@ -92,6 +92,7 @@
                 android:layout_margin="30dp"
                 android:backgroundTint="#3E6AA6"
                 android:fontFamily="sans-serif-medium"
+                android:onClick="MainScreen"
                 android:padding="12dp"
                 android:text="Đăng nhập"
                 android:textColor="@android:color/white"
@@ -105,7 +106,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="20dp"
                 android:gravity="center"
-                android:onClick="goToRegisterScreen"
+                android:onClick="RegisterScreen"
                 android:text="Chưa có tài khoản? Đăng ký"
                 android:textColor="#3E6AA6"
                 android:textSize="16sp" />
