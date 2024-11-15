@@ -1,8 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#34C8F2"
+    android:background="@drawable/background_image"
     android:gravity="center"
     android:orientation="vertical"
     android:padding="24dp">
@@ -13,7 +14,7 @@
         android:layout_height="wrap_content"
         android:fontFamily="cursive"
         android:gravity="center"
-        android:text="Hpivix"
+        android:text="HGallery"
         android:textColor="#FFFFFF"
         android:textSize="60dp"
         android:textStyle="bold" />
@@ -36,20 +37,49 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
         app:cardCornerRadius="24dp"
-        app:cardElevation="8dp">
+        app:cardElevation="8dp"
+        android:backgroundTint="#DEDEDE"
+        android:alpha="0.8"> <!-- Điều chỉnh alpha để khung trong suốt hơn -->
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="#DEDEDE"
-            android:gravity="center"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:padding="16dp">
 
+            <!-- Tiêu đề "Đăng nhập" trong khung -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginBottom="16dp"
+                android:text="Đắng ký"
+                android:textColor="#548AD7"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+            <!-- Trường nập tên người dùng -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:elevation="4dp"
+                app:cardCornerRadius="16dp">
+
+                <EditText
+                    android:id="@+id/txtUser"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/white"
+                    android:hint="Tên người dùng"
+                    android:padding="16dp"
+                    android:textColor="#000000"
+                    android:textSize="16sp" />
+            </androidx.cardview.widget.CardView>
             <!-- Trường Nhập Email -->
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="20dp"
+                android:layout_margin="8dp"
                 android:elevation="4dp"
                 app:cardCornerRadius="16dp">
 
@@ -68,7 +98,7 @@
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="20dp"
+                android:layout_margin="8dp"
                 android:elevation="4dp"
                 app:cardCornerRadius="16dp">
 
@@ -89,8 +119,8 @@
                 android:id="@+id/btnRegister"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="30dp"
-                android:backgroundTint="#3E6AA6"
+                android:layout_marginTop="16dp"
+                android:backgroundTint="#548AD7"
                 android:fontFamily="sans-serif-medium"
                 android:onClick="MainScreen"
                 android:padding="12dp"
@@ -104,8 +134,8 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="20dp"
-                android:gravity="center"
+                android:layout_marginTop="16dp"
+                android:layout_gravity="center"
                 android:onClick="LoginScreen"
                 android:text="Đã có tài khoản? Đăng nhập"
                 android:textColor="#3E6AA6"

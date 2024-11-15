@@ -2,7 +2,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#34C8F2"
+    android:background="@drawable/background_image"
     android:gravity="center"
     android:orientation="vertical"
     android:padding="24dp">
@@ -13,7 +13,7 @@
         android:layout_height="wrap_content"
         android:fontFamily="cursive"
         android:gravity="center"
-        android:text="Hpivix"
+        android:text="HGallery"
         android:textColor="#FFFFFF"
         android:textSize="60dp"
         android:textStyle="bold" />
@@ -35,15 +35,28 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
+        android:alpha="0.8"
+        android:background="#00FFFFFF"
         app:cardCornerRadius="24dp"
         app:cardElevation="8dp">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="#DEDEDE"
+            android:background="#FEDEDEDE"
             android:gravity="center"
             android:orientation="vertical">
+
+            <!-- Tiêu đề "Đăng nhập" trong khung -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginBottom="16dp"
+                android:text="Đăng nhập"
+                android:textColor="#548AD7"
+                android:textSize="24sp"
+                android:textStyle="bold" />
 
             <!-- Trường Nhập Tên Người Dùng -->
             <androidx.cardview.widget.CardView
@@ -58,7 +71,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:background="@android:color/white"
-                    android:hint="Email"
+                    android:hint="Tên người dùng"
                     android:padding="16dp"
                     android:textColor="#000000"
                     android:textSize="16sp" />
@@ -90,7 +103,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="30dp"
-                android:backgroundTint="#3E6AA6"
+                android:backgroundTint="#548AD7"
                 android:fontFamily="sans-serif-medium"
                 android:onClick="MainScreen"
                 android:padding="12dp"
