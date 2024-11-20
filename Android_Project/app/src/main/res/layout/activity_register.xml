@@ -14,7 +14,7 @@
         android:layout_height="wrap_content"
         android:fontFamily="cursive"
         android:gravity="center"
-        android:text="HGallery"
+        android:text="PicHub"
         android:textColor="#FFFFFF"
         android:textSize="60dp"
         android:textStyle="bold" />
@@ -28,7 +28,7 @@
         android:gravity="center"
         android:text="Cảm xúc qua từng khung hình"
         android:textColor="@android:color/white"
-        android:textSize="30dp"
+        android:textSize="28dp"
         android:textStyle="italic" />
 
     <!-- Khung chứa các trường nhập liệu và nút đăng ký -->
@@ -44,6 +44,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:gravity="center"
             android:orientation="vertical"
             android:padding="16dp">
 
@@ -53,7 +54,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginBottom="16dp"
-                android:text="Đắng ký"
+                android:text="Đăng ký"
                 android:textColor="#548AD7"
                 android:textSize="24sp"
                 android:textStyle="bold" />
@@ -73,6 +74,7 @@
                     android:hint="Tên người dùng"
                     android:padding="16dp"
                     android:textColor="#000000"
+                    android:textColorHint="#9C000000"
                     android:textSize="16sp" />
             </androidx.cardview.widget.CardView>
             <!-- Trường Nhập Email -->
@@ -91,6 +93,7 @@
                     android:hint="Email"
                     android:padding="16dp"
                     android:textColor="#000000"
+                    android:textColorHint="#9C000000"
                     android:textSize="16sp" />
             </androidx.cardview.widget.CardView>
 
@@ -111,6 +114,7 @@
                     android:inputType="textPassword"
                     android:padding="16dp"
                     android:textColor="#000000"
+                    android:textColorHint="#9C000000"
                     android:textSize="16sp" />
             </androidx.cardview.widget.CardView>
 
@@ -122,7 +126,6 @@
                 android:layout_marginTop="16dp"
                 android:backgroundTint="#548AD7"
                 android:fontFamily="sans-serif-medium"
-                android:onClick="MainScreen"
                 android:padding="12dp"
                 android:text="Đăng ký"
                 android:textColor="@android:color/white"
@@ -132,10 +135,11 @@
 
             <!-- Liên kết Quay Lại -->
             <TextView
+                android:id="@+id/txtViewLogin"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
                 android:layout_gravity="center"
+                android:layout_marginTop="16dp"
                 android:onClick="LoginScreen"
                 android:text="Đã có tài khoản? Đăng nhập"
                 android:textColor="#3E6AA6"
