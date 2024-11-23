@@ -1,18 +1,77 @@
-<?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Fragment.HomeFragment">
+    android:background="#EEF2F6"
+    android:orientation="vertical"
+    android:padding="24dp">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:layout_width="wrap_content"
+    <!-- Form nhập ID phòng -->
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Home Fragment"
-        android:textSize="30sp"
-        android:layout_centerInParent="true"
-        android:textColor="@color/lavender"/>
+        android:orientation="vertical"
+        android:background="@drawable/form_home"
+        android:padding="16dp"
+        android:layout_marginBottom="24dp">
 
-</RelativeLayout>
+        <!-- Tiêu đề Form -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            android:fontFamily="sans-serif-medium"
+            android:gravity="center"
+            android:text="Nhập ID phòng"
+            android:textColor="#2E77D7"
+            android:textSize="30dp"
+            android:textStyle="bold" />
+
+        <!-- Trường nhập ID phòng -->
+        <EditText
+            android:id="@+id/edtRoomID"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/edit_background"
+            android:hint="Nhập ID phòng"
+            android:padding="14dp"
+            android:textColor="#2E2E2E"
+            android:textColorHint="#9C9C9C"
+            android:textSize="24sp" />
+
+        <!-- Nút Bắt đầu -->
+        <Button
+            android:id="@+id/btnStart"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#2E77D7"
+            android:fontFamily="sans-serif-medium"
+            android:padding="12dp"
+            android:text="Bắt đầu"
+            android:textColor="@android:color/white"
+            android:textSize="24sp" />
+    </LinearLayout>
+
+    <!-- Form hiển thị đề bài -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:background="@drawable/form_home"
+        android:padding="16dp">
+
+        <!-- Tiêu đề -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-medium"
+            android:gravity="center"
+            android:text="Đề bài của bạn"
+            android:textColor="#2E77D7"
+            android:textSize="24dp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+</LinearLayout>
