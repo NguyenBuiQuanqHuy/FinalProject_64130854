@@ -2,7 +2,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/background_image"
+    android:background="#81A1D7"
     android:gravity="center"
     android:orientation="vertical"
     android:padding="24dp">
@@ -11,11 +11,11 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:fontFamily="cursive"
+        android:fontFamily="serif"
         android:gravity="center"
-        android:text="PicHub"
+        android:text="QuizMaker"
         android:textColor="#FFFFFF"
-        android:textSize="60dp"
+        android:textSize="55dp"
         android:textStyle="bold" />
 
     <!-- Slogan -->
@@ -23,11 +23,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:fontFamily="cursive"
+        android:fontFamily="serif"
         android:gravity="center"
-        android:text="Cảm xúc qua từng khung hình"
-        android:textColor="@android:color/white"
-        android:textSize="28dp"
+        android:text="Xây dựng đề thi, chinh phục kiến thức!"
+        android:textColor="#FFFFFF"
+        android:textSize="25dp"
         android:textStyle="italic" />
 
     <!-- Khung chứa các trường nhập liệu và nút đăng nhập -->
@@ -56,7 +56,7 @@
                 android:layout_marginBottom="16dp"
                 android:text="Đăng nhập"
                 android:textColor="#548AD7"
-                android:textSize="24sp"
+                android:textSize="30dp"
                 android:textStyle="bold" />
 
             <!-- Trường Nhập Tên Người Dùng -->
@@ -68,7 +68,7 @@
                 app:cardCornerRadius="16dp">
 
                 <EditText
-                    android:id="@+id/txtEmail"
+                    android:id="@+id/txtProfileEmail"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:background="@android:color/white"

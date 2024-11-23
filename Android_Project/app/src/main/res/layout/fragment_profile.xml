@@ -20,14 +20,13 @@
             android:layout_gravity="center"
             android:clipToOutline="true"
             android:outlineProvider="background"
-            android:scaleType="fitXY"
-            android:src="@drawable/background_image" />
+            android:scaleType="fitXY" />
 
     </androidx.cardview.widget.CardView>
 
     <!-- Tên người dùng -->
     <TextView
-        android:id="@+id/txtUsername"
+        android:id="@+id/txtProfilename"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Tên người dùng"
@@ -37,7 +36,7 @@
 
     <!-- Email -->
     <TextView
-        android:id="@+id/txtEmail"
+        android:id="@+id/txtProfileEmail"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="email@example.com"

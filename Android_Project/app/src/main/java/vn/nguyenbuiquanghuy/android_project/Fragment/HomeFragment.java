@@ -1,4 +1,4 @@
-package vn.nguyenbuiquanghuy.android_project;
+package vn.nguyenbuiquanghuy.android_project.Fragment;
 
 import android.os.Bundle;
 
@@ -7,6 +7,8 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+
+import vn.nguyenbuiquanghuy.android_project.R;
 
 public class HomeFragment extends Fragment {
 

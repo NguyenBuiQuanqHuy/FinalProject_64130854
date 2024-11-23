@@ -1,12 +1,13 @@
-package vn.nguyenbuiquanghuy.android_project;
+package vn.nguyenbuiquanghuy.android_project.Account;
 
 public class Account {
-    String userName,email,password;
+    String userName,email,password,imageUrl;
 
-    public Account(String userName, String email, String password) {
+    public Account(String userName, String email, String password, String imageUrl) {
         this.userName = userName;
         this.email = email;
         this.password = password;
+        this.imageUrl = imageUrl;
     }
 
     public String getUserName() {
@@ -31,6 +32,14 @@ public class Account {
 
     public void setPassword(String password) {
         this.password = password;
+    }
+
+    public String getImageUrl() {
+        return imageUrl;
+    }
+
+    public void setImageUrl(String imageUrl) {
+        this.imageUrl = imageUrl;
     }
 
     public Account() {

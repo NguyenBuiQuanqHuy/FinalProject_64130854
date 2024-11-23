@@ -19,12 +19,21 @@ import android.widget.Toast;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.navigation.NavigationView;
+
+import vn.nguyenbuiquanghuy.android_project.Account.Login;
+import vn.nguyenbuiquanghuy.android_project.Fragment.HomeFragment;
+import vn.nguyenbuiquanghuy.android_project.Fragment.NewFragment;
+import vn.nguyenbuiquanghuy.android_project.Fragment.ProfileFragment;
+
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
     private DrawerLayout drawerLayout;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+
+
         Toolbar toolbar = findViewById(R.id.toolbar); //Ignore red line errors
         setSupportActionBar(toolbar);
         drawerLayout = findViewById(R.id.drawer_layout);
@@ -39,26 +48,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             navigationView.setCheckedItem(R.id.nav_home);
         }
 
-        View header=navigationView.getHeaderView(0);
-        ImageView useImage=header.findViewById(R.id.avatar);
-        TextView userName=header.findViewById(R.id.txtName);
-        useImage.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Toast.makeText(MainActivity.this,userName.getText(),Toast.LENGTH_SHORT).show();
-            }
-        });
-
-        FloatingActionButton fab =findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent upload=new Intent(MainActivity.this,Upload.class);
-                startActivity(upload);
-            }
-        });
-
-
     }
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
@@ -68,9 +57,10 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         } else if (item.getItemId() == R.id.nav_follow) {
             getSupportFragmentManager().beginTransaction().replace(R.id.fragment_layout, new NewFragment()).commit();
         } else if (item.getItemId() == R.id.nav_profile) {
+
             getSupportFragmentManager().beginTransaction().replace(R.id.fragment_layout, new ProfileFragment()).commit();
         } else if (item.getItemId() == R.id.nav_logout) {
-            Toast.makeText(this, "Logout!", Toast.LENGTH_SHORT).show();
+            startActivity(new Intent(MainActivity.this, Login.class));
         }
         drawerLayout.closeDrawer(GravityCompat.START);
         return true;
