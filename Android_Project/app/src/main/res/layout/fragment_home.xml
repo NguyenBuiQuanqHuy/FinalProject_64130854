@@ -22,7 +22,7 @@
             android:layout_marginBottom="12dp"
             android:fontFamily="sans-serif-medium"
             android:gravity="center"
-            android:text="Nhập ID phòng"
+            android:text="Luyện kiến thức"
             android:textColor="#2E77D7"
             android:textSize="30dp"
             android:textStyle="bold" />
