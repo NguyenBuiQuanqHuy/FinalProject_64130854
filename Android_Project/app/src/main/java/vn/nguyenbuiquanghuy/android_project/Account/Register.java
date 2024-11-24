@@ -26,6 +26,7 @@ public class Register extends AppCompatActivity {
 
     FirebaseAuth auth;
     DatabaseReference reference;
+    FirebaseUser user;
 
 
 
@@ -45,13 +46,16 @@ public class Register extends AppCompatActivity {
         loginRedirect=findViewById(R.id.txtViewLogin);
 
         auth=FirebaseAuth.getInstance();
-        reference=FirebaseDatabase.getInstance().getReference();
+        FirebaseDatabase database=FirebaseDatabase.getInstance();
+        reference=database.getInstance().getReference("Users");
+
+        user= auth.getCurrentUser();
 
 
         btnSignUp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String user=signUpUser.getText().toString().trim();
+                String username=signUpUser.getText().toString().trim();
                 String email=signUpEmail.getText().toString().trim();
                 String pass=signUpPass.getText().toString().trim();
 
@@ -61,7 +65,7 @@ public class Register extends AppCompatActivity {
                     signUpPass.setError("Mật khẩu phải có 6 ký tự trở lên");
                     return; // Dừng lại không thực hiện đăng ký
                 }
-                if (user.isEmpty()){
+                if (username.isEmpty()){
                     signUpUser.setError("Hãy nhập tên tài khoản");
                 }
                 if (pass.isEmpty()) {
@@ -73,6 +77,9 @@ public class Register extends AppCompatActivity {
                     auth.createUserWithEmailAndPassword(email,pass).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                         @Override
                         public void onComplete(@NonNull Task<AuthResult> task) {
+
+                            Account account=new Account(username,email,pass);
+                            reference.child(username).setValue(account);
                             Toast.makeText(Register.this, "Tạo tài khoản thành công", Toast.LENGTH_SHORT).show();
                             Intent intent = new Intent(Register.this, Login.class);
                             startActivity(intent);

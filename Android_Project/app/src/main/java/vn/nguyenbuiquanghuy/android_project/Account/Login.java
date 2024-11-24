@@ -19,6 +19,7 @@ import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 
 import vn.nguyenbuiquanghuy.android_project.MainActivity;
 import vn.nguyenbuiquanghuy.android_project.R;
@@ -30,6 +31,7 @@ public class Login extends AppCompatActivity {
     TextView signUpReidirect;
 
     FirebaseAuth auth;
+    FirebaseUser user;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -42,20 +44,27 @@ public class Login extends AppCompatActivity {
         signUpReidirect=findViewById(R.id.txtViewSignUp);
 
         auth=FirebaseAuth.getInstance();
+        user=auth.getCurrentUser();
         loginButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String user = loginUser.getText().toString();
+                String email = loginUser.getText().toString();
                 String pass = loginPass.getText().toString();
 
-                if (!user.isEmpty() && Patterns.EMAIL_ADDRESS.matcher(user).matches()) {
+
+                if (!email.isEmpty() && Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
                     if (!pass.isEmpty()) {
-                        auth.signInWithEmailAndPassword(user, pass)
+                        auth.signInWithEmailAndPassword(email, pass)
                                 .addOnSuccessListener(new OnSuccessListener<AuthResult>() {
                                     @Override
                                     public void onSuccess(AuthResult authResult) {
+
+
                                         Toast.makeText(Login.this, "Đăng nhập thành công", Toast.LENGTH_SHORT).show();
-                                        startActivity(new Intent(Login.this, MainActivity.class));
+                                        Intent intent =new Intent(Login.this,MainActivity.class);
+                                        startActivity(intent);
+                                        finish();
+
                                     }
                                 }).addOnFailureListener(new OnFailureListener() {
                                     @Override
@@ -66,7 +75,7 @@ public class Login extends AppCompatActivity {
                     } else {
                         loginPass.setError("Mật khẩu không được trống");
                     }
-                } else if (user.isEmpty()) {
+                } else if (email.isEmpty()) {
                     loginUser.setError("Tên tài khoản khng được trống");
                 } else {
                     loginUser.setError("Tên tài khoản không đúng");
