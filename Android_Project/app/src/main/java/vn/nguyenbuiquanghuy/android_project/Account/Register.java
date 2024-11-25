@@ -47,7 +47,7 @@ public class Register extends AppCompatActivity {
 
         auth=FirebaseAuth.getInstance();
         FirebaseDatabase database=FirebaseDatabase.getInstance();
-        reference=database.getInstance().getReference("Users");
+        reference=database.getReference("Users");
 
         user= auth.getCurrentUser();
 
@@ -68,9 +68,6 @@ public class Register extends AppCompatActivity {
                 if (username.isEmpty()){
                     signUpUser.setError("Hãy nhập tên tài khoản");
                 }
-                if (pass.isEmpty()) {
-                    signUpPass.setError("Hãy nhập mật khẩu");
-                }
                 if (email.isEmpty()){
                     signUpEmail.setError("Hãy nhập Email");
                 }else {
@@ -83,6 +80,7 @@ public class Register extends AppCompatActivity {
                             Toast.makeText(Register.this, "Tạo tài khoản thành công", Toast.LENGTH_SHORT).show();
                             Intent intent = new Intent(Register.this, Login.class);
                             startActivity(intent);
+                            finish();
                         }
                     });
                 }

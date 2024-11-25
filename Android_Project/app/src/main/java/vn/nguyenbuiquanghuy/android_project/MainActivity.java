@@ -56,9 +56,16 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     }
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-        Log.d("Navigation", "Item selected: " + item.getItemId()); // Debug log
         if (item.getItemId() == R.id.nav_home) {
-            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_layout, new HomeFragment()).commit();
+            Intent intent= getIntent();
+            String userName = intent.getStringExtra("name");
+            // Chuyển qua HomeFragment và truyền tên người dùng
+            HomeFragment homeFragment = new HomeFragment();
+            Bundle bundle = new Bundle();
+            bundle.putString("name",userName); // Thêm tên người dùng vào Bundle
+            // Truyền Bundle vào HomeFragment
+            homeFragment.setArguments(bundle);
+            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_layout, homeFragment).commit();
         } else if (item.getItemId() == R.id.nav_follow) {
             getSupportFragmentManager().beginTransaction().replace(R.id.fragment_layout, new NewFragment()).commit();
         } else if (item.getItemId() == R.id.nav_profile) {

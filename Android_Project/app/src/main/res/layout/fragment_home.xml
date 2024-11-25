@@ -12,9 +12,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="16dp"
-        android:gravity="center"
         android:fontFamily="sans-serif-medium"
-        android:text="Xin chào, [Tên Người Dùng]"
+        android:gravity="center"
+        android:text="Người Dùng"
         android:textColor="#548AD7"
         android:textSize="24sp"
         android:textStyle="bold" />

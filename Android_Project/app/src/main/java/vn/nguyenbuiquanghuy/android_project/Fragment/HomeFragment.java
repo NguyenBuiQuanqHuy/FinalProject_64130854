@@ -1,12 +1,10 @@
 package vn.nguyenbuiquanghuy.android_project.Fragment;
 
-import static android.content.Intent.getIntent;
-
 import android.os.Bundle;
 
-import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -15,17 +13,9 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.google.firebase.database.DataSnapshot;
-import com.google.firebase.database.DatabaseError;
-import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.database.ValueEventListener;
-
 import vn.nguyenbuiquanghuy.android_project.R;
 
 public class HomeFragment extends Fragment {
-    private String userUID;
-    private String name;
 
     EditText quizID;
     EditText quizTitle;
@@ -41,8 +31,6 @@ public class HomeFragment extends Fragment {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_home, container, false);
 
-        DatabaseReference reference = FirebaseDatabase.getInstance().getReference();
-
         quizID = view.findViewById(R.id.edtRoomID);
         quizTitle = view.findViewById(R.id.edtRoomTilte);
         startButton = view.findViewById(R.id.btnStart);
@@ -51,7 +39,12 @@ public class HomeFragment extends Fragment {
         myquiz = view.findViewById(R.id.textViewMyQuiz);
         username = view.findViewById(R.id.tvUserName);
 
-
+        Bundle bundle = getArguments();
+        if (bundle != null) {
+            String nameDB = bundle.getString("name"); // Lấy tên người dùng từ Bundle
+            username.setText(nameDB); // Gán tên người dùng vào TextView
+            Toast.makeText(getActivity(), "thành công", Toast.LENGTH_SHORT).show();
+        }
 
         return view;
     }
