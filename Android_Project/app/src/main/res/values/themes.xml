@@ -12,7 +12,7 @@
         <!-- Customize your theme here. -->
     </style>
 
-    <style name="Theme.Android_Project" parent="Base.Theme.Android_Project"/>
-   
+    <style name="Theme.Android_Project" parent="Base.Theme.Android_Project" />
+
 
 </resources>

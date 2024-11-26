@@ -5,22 +5,45 @@
     android:orientation="vertical"
     android:padding="16dp">
 
+    <!-- Layout chứa TextView -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp">
+
+        <!-- TextView phía trên ListView -->
+        <TextView
+            android:id="@+id/tvHeader"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#548AD7"
+            android:gravity="center"
+            android:padding="8dp"
+            android:text="Danh sách của bạn"
+            android:textColor="@color/white"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
     <!-- ListView để hiển thị danh sách -->
     <ListView
         android:id="@+id/listView"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
-    android:divider="@android:color/darker_gray"
-    android:dividerHeight="0.5dp"
-    android:padding="8dp" />
+        android:divider="@android:color/darker_gray"
+        android:dividerHeight="0.5dp"
+        android:padding="8dp" />
 
     <!-- Nút Submit dưới ListView -->
     <Button
         android:id="@+id/btnSubmit"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="#548AD7"
         android:text="Submit"
-        android:layout_marginTop="16dp" />
+        android:textSize="20dp" />
 
 </LinearLayout>

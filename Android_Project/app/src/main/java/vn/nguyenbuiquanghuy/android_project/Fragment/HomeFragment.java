@@ -1,51 +1,47 @@
 package vn.nguyenbuiquanghuy.android_project.Fragment;
 
+import android.content.Intent;
 import android.os.Bundle;
-
+import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
-import android.widget.EditText;
-import android.widget.TextView;
-import android.widget.Toast;
 
+import java.util.ArrayList;
 import vn.nguyenbuiquanghuy.android_project.R;
+import vn.nguyenbuiquanghuy.android_project.Topic.Topic;
+import vn.nguyenbuiquanghuy.android_project.Topic.TopicAdapter;
 
 public class HomeFragment extends Fragment {
+    TopicAdapter topicAdapter;
+    ArrayList<Topic> TopicRecycler;
+    RecyclerView recyclerView;
 
-    EditText quizID;
-    EditText quizTitle;
-    Button startButton;
-    Button createButton;
-    TextView solvedquiz;
-    TextView myquiz;
-    TextView username;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
+        // Inflate layout
         View view = inflater.inflate(R.layout.fragment_home, container, false);
 
-        quizID = view.findViewById(R.id.edtRoomID);
-        quizTitle = view.findViewById(R.id.edtRoomTilte);
-        startButton = view.findViewById(R.id.btnStart);
-        createButton = view.findViewById(R.id.btnCreate);
-        solvedquiz = view.findViewById(R.id.textViewKQ);
-        myquiz = view.findViewById(R.id.textViewMyQuiz);
-        username = view.findViewById(R.id.tvUserName);
-
-        Bundle bundle = getArguments();
-        if (bundle != null) {
-            String nameDB = bundle.getString("name"); // Lấy tên người dùng từ Bundle
-            username.setText(nameDB); // Gán tên người dùng vào TextView
-            Toast.makeText(getActivity(), "thành công", Toast.LENGTH_SHORT).show();
-        }
-
+        TopicRecycler=getTopicRecycler();
+        recyclerView=view.findViewById(R.id.rv_topics);
+        RecyclerView.LayoutManager layoutManager=new LinearLayoutManager(getActivity());
+        recyclerView.setLayoutManager(layoutManager);
+        topicAdapter=new TopicAdapter(getActivity(),TopicRecycler);
+        recyclerView.setAdapter(topicAdapter);
         return view;
+    }
+
+    ArrayList<Topic> getTopicRecycler(){
+        ArrayList<Topic> ListData=new ArrayList<>();
+        ListData.add(new Topic("vocabulary","Vocabulary"));
+        ListData.add(new Topic("grammar","Grammar"));
+        ListData.add(new Topic("animal","Animals"));
+        return ListData;
     }
 }

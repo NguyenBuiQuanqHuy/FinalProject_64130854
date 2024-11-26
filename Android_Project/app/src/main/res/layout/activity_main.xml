@@ -9,48 +9,44 @@
     tools:context=".MainActivity"
     tools:openDrawer="start">
 
-    <!-- CoordinatorLayout to manage interactions between the components -->
-    <androidx.coordinatorlayout.widget.CoordinatorLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
 
-        <!-- Main content layout -->
+
+        <!-- Main Content -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:padding="16dp">
 
             <!-- Toolbar -->
             <androidx.appcompat.widget.Toolbar
                 android:id="@+id/toolbar"
                 android:layout_width="match_parent"
                 android:layout_height="56dp"
-                android:background="#548AD7"
+                android:background="#FFC107"
                 android:elevation="4dp"
-                android:popupTheme="@style/ThemeOverlay.AppCompat.Light"
-                android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar" />
+                android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+                app:title="English Quiz"
+                app:titleTextColor="#FFFFFF" />
 
-            <!-- Fragment container -->
+            <!-- Fragment Container -->
             <FrameLayout
                 android:id="@+id/fragment_layout"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent" />
-
+                android:layout_height="match_parent"
+                android:background="#FAFAFA" />
         </LinearLayout>
 
-        <!-- FloatingActionButton (FAB) -->
 
-    </androidx.coordinatorlayout.widget.CoordinatorLayout>
-
+    <!-- Navigation Drawer -->
     <com.google.android.material.navigation.NavigationView
         android:id="@+id/nav_view"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:layout_gravity="start"
-        android:layout_marginTop="50dp"
-        app:itemIconTint="#548AD7"
-        app:itemTextColor="#548AD7"
+        android:background="#FFFFFF"
+        app:itemIconTint="#FFC107"
+        app:itemTextColor="#000000"
         app:menu="@menu/nav_menu" />
-
 
 </androidx.drawerlayout.widget.DrawerLayout>

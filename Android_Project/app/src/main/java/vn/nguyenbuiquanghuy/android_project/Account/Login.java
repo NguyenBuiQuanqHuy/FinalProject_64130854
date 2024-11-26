@@ -80,26 +80,9 @@ public class Login extends AppCompatActivity {
                             @Override
                             public void onSuccess(AuthResult authResult) {
                                 Toast.makeText(Login.this, "Đăng nhập thành công", Toast.LENGTH_SHORT).show();
-                                String uid = auth.getCurrentUser().getUid();
-                                DatabaseReference reference = FirebaseDatabase.getInstance().getReference("Users").child(uid);
-                                reference.addListenerForSingleValueEvent(new ValueEventListener() {
-                                    @Override
-                                    public void onDataChange(@NonNull DataSnapshot snapshot) {
-                                            // Chuyển sang màn hình chính và truyền tên người dùng vào Intent
-                                            String nameDB= snapshot.child("name").getValue(String.class);
-                                            Intent intent = new Intent(Login.this, MainActivity.class);
-                                            intent.putExtra("name",nameDB);
-                                            startActivity(intent);
-
-                                    }
-
-                                    @Override
-                                    public void onCancelled(@NonNull DatabaseError error) {
-
-                                    }
-                                });
-
-
+                                Intent intent = new Intent(Login.this, MainActivity.class);
+                                startActivity(intent);
+                                finish();
                             }
                         })
                         .addOnFailureListener(new OnFailureListener() {
