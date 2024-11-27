@@ -8,7 +8,6 @@ import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.firebase.database.DataSnapshot;
@@ -29,15 +28,22 @@ public class Quiz extends AppCompatActivity {
     private List<Questions> questionList;
     private int currentQuestionIndex = 0;
 
-    private FirebaseDatabase database;
     private DatabaseReference questionRef;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        EdgeToEdge.enable(this);
         setContentView(R.layout.activity_question);
 
-        // Khởi tạo các thành phần UI
+        // Lấy chủ đề từ Intent
+        String topic = getIntent().getStringExtra("topic");
+        if (topic == null) {
+            Toast.makeText(this, "Không tìm thấy chủ đề!", Toast.LENGTH_SHORT).show();
+            finish();
+            return;
+        }
+
+        // Ánh xạ view
         tvQuestion = findViewById(R.id.tv_question);
         rgOptions = findViewById(R.id.rg_options);
         rbOption1 = findViewById(R.id.rb_option1);
@@ -46,39 +52,53 @@ public class Quiz extends AppCompatActivity {
         rbOption4 = findViewById(R.id.rb_option4);
         btnNext = findViewById(R.id.btn_next);
 
-        database = FirebaseDatabase.getInstance();
-        questionRef = database.getReference("questions");
-        // Load câu hỏi từ Firebase
+        // Kết nối Firebase
+        FirebaseDatabase database = FirebaseDatabase.getInstance();
+        questionRef = database.getReference("questions").child(topic);
+
+        // Tải dữ liệu từ Firebase
         loadQuestionsFromFirebase();
-        // Xử lý sự kiện cho nút Next
-        btnNext.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if (rgOptions.getCheckedRadioButtonId() != -1) {
-                    int selectedOption = rgOptions.getCheckedRadioButtonId();
-                    checkAnswer(selectedOption);
-                } else {
-                    Toast.makeText(Quiz.this, "Please select an option", Toast.LENGTH_SHORT).show();
-                }
+
+        // Xử lý nút Next
+        btnNext.setOnClickListener(v -> {
+            if (rgOptions.getCheckedRadioButtonId() != -1) {
+                checkAnswer();
+            } else {
+                Toast.makeText(Quiz.this, "Vui lòng chọn một đáp án.", Toast.LENGTH_SHORT).show();
             }
         });
     }
 
     private void loadQuestionsFromFirebase() {
-        questionList = new ArrayList<Questions>();
-        questionRef.addValueEventListener(new ValueEventListener() {
+        questionList = new ArrayList<>();
+        questionRef.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
-                for (DataSnapshot snapshot : dataSnapshot.getChildren()) {
-                    Questions question = snapshot.getValue(Questions.class);
-                    questionList.add(question);
+                if (dataSnapshot.exists()) {
+                    for (DataSnapshot snapshot : dataSnapshot.getChildren()) {
+                        Questions question = snapshot.getValue(Questions.class);
+                        if (question != null) {
+                            questionList.add(question);
+                        }
+                    }
+
+                    // Kiểm tra nếu có câu hỏi để hiển thị
+                    if (!questionList.isEmpty()) {
+                        displayQuestion(currentQuestionIndex);
+                    } else {
+                        Toast.makeText(Quiz.this, "Không có câu hỏi nào cho chủ đề này.", Toast.LENGTH_SHORT).show();
+                        finish();
+                    }
+                } else {
+                    Toast.makeText(Quiz.this, "Không có dữ liệu trong Firebase.", Toast.LENGTH_SHORT).show();
+                    finish();
                 }
-                displayQuestion(currentQuestionIndex);
             }
 
             @Override
             public void onCancelled(DatabaseError databaseError) {
-                Toast.makeText(Quiz.this, "Failed to load questions", Toast.LENGTH_SHORT).show();
+                Toast.makeText(Quiz.this, "Lỗi tải dữ liệu: " + databaseError.getMessage(), Toast.LENGTH_SHORT).show();
+                finish();
             }
         });
     }
@@ -86,46 +106,47 @@ public class Quiz extends AppCompatActivity {
     private void displayQuestion(int index) {
         if (index < questionList.size()) {
             Questions question = questionList.get(index);
+            tvQuestion.setText(question.getQuestion());
 
-            // Hiển thị câu hỏi
-            tvQuestion.setText(question.getQuestionText());
+            rbOption1.setText(question.getOption1());
+            rbOption2.setText(question.getOption2());
+            rbOption3.setText(question.getOption3());
+            rbOption4.setText(question.getOption4());
 
-            // Hiển thị các lựa chọn
-            rbOption1.setText(question.getOptions().get(0));
-            rbOption2.setText(question.getOptions().get(1));
-            rbOption3.setText(question.getOptions().get(2));
-            rbOption4.setText(question.getOptions().get(3));
+            rgOptions.clearCheck(); // Xóa lựa chọn cũ
         }
     }
 
-    private void checkAnswer(int selectedOption) {
+    private void checkAnswer() {
         Questions currentQuestion = questionList.get(currentQuestionIndex);
-        String correctAnswer = currentQuestion.getCorrectAnswer();
+        String correctAnswer = currentQuestion.getAnswer();
 
         String selectedAnswer = "";
-        if (selectedOption == rbOption1.getId()) {
+        int selectedOptionId = rgOptions.getCheckedRadioButtonId();
+
+        if (selectedOptionId == rbOption1.getId()) {
             selectedAnswer = rbOption1.getText().toString();
-        } else if (selectedOption == rbOption2.getId()) {
+        } else if (selectedOptionId == rbOption2.getId()) {
             selectedAnswer = rbOption2.getText().toString();
-        } else if (selectedOption == rbOption3.getId()) {
+        } else if (selectedOptionId == rbOption3.getId()) {
             selectedAnswer = rbOption3.getText().toString();
-        } else if (selectedOption == rbOption4.getId()) {
+        } else if (selectedOptionId == rbOption4.getId()) {
             selectedAnswer = rbOption4.getText().toString();
         }
 
         if (selectedAnswer.equals(correctAnswer)) {
-            Toast.makeText(this, "Correct!", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Chính xác!", Toast.LENGTH_SHORT).show();
         } else {
-            Toast.makeText(this, "Incorrect. The correct answer is: " + correctAnswer, Toast.LENGTH_LONG).show();
+            Toast.makeText(this, "Sai rồi. Đáp án đúng là: " + correctAnswer, Toast.LENGTH_LONG).show();
         }
 
-        // Tăng chỉ số câu hỏi và hiển thị câu hỏi tiếp theo
+        // Hiển thị câu hỏi tiếp theo hoặc kết thúc
         if (currentQuestionIndex < questionList.size() - 1) {
             currentQuestionIndex++;
             displayQuestion(currentQuestionIndex);
-            rgOptions.clearCheck();  // Dọn dẹp lựa chọn trước
         } else {
-            Toast.makeText(this, "Quiz Completed!", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Bạn đã hoàn thành bài kiểm tra!", Toast.LENGTH_SHORT).show();
+            finish();
         }
     }
 }
