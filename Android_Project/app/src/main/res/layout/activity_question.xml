@@ -42,7 +42,7 @@
 
     <!-- Tiêu đề câu hỏi -->
     <TextView
-        android:id="@+id/tv_question"
+        android:id="@+id/tv_results"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Question here"
@@ -56,7 +56,7 @@
 
     <!-- Các lựa chọn câu trả lời -->
     <RadioGroup
-        android:id="@+id/rg_options"
+        android:id="@+id/rg_results"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
@@ -66,7 +66,7 @@
 
         <!-- Option 1 -->
         <RadioButton
-            android:id="@+id/rb_option1"
+            android:id="@+id/rb_result1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Option 1"
@@ -78,7 +78,7 @@
 
         <!-- Option 2 -->
         <RadioButton
-            android:id="@+id/rb_option2"
+            android:id="@+id/rb_result2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Option 2"
@@ -90,7 +90,7 @@
 
         <!-- Option 3 -->
         <RadioButton
-            android:id="@+id/rb_option3"
+            android:id="@+id/rb_result3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Option 3"
@@ -102,7 +102,7 @@
 
         <!-- Option 4 -->
         <RadioButton
-            android:id="@+id/rb_option4"
+            android:id="@+id/rb_result4"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Option 4"
