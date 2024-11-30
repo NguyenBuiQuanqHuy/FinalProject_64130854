@@ -10,7 +10,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 import java.util.ArrayList;
 
-import vn.nguyenbuiquanghuy.android_project.Quiz;
+import vn.nguyenbuiquanghuy.android_project.Quiz.Quiz;
 import vn.nguyenbuiquanghuy.android_project.R;
 
 public class TopicAdapter extends RecyclerView.Adapter<TopicAdapter.ItemTopicHolder> {

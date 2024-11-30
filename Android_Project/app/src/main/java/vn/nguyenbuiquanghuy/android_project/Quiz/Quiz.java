@@ -1,7 +1,6 @@
-package vn.nguyenbuiquanghuy.android_project;
+package vn.nguyenbuiquanghuy.android_project.Quiz;
 
 import android.os.Bundle;
-import android.view.View;
 import android.widget.Button;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
@@ -18,6 +17,8 @@ import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import vn.nguyenbuiquanghuy.android_project.R;
 
 public class Quiz extends AppCompatActivity {
     private TextView tvQuestion;

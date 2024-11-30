@@ -1,6 +1,4 @@
-package vn.nguyenbuiquanghuy.android_project;
-
-import java.util.List;
+package vn.nguyenbuiquanghuy.android_project.Quiz;
 
 public class Questions {
     private String question;

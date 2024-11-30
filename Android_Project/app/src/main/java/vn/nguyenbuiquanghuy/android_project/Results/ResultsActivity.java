@@ -1,4 +1,4 @@
-package vn.nguyenbuiquanghuy.android_project;
+package vn.nguyenbuiquanghuy.android_project.Results;
 
 import android.os.Bundle;
 
@@ -8,12 +8,14 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
-public class Exams extends AppCompatActivity {
+import vn.nguyenbuiquanghuy.android_project.R;
+
+public class ResultsActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
-        setContentView(R.layout.activity_exams);
+        setContentView(R.layout.activity_result);
     }
 }

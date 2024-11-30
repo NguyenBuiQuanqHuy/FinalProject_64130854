@@ -20,8 +20,6 @@ import android.widget.TextView;
 import com.google.android.material.navigation.NavigationView;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
-
-import vn.nguyenbuiquanghuy.android_project.Account.Login;
 import vn.nguyenbuiquanghuy.android_project.Fragment.HomeFragment;
 import vn.nguyenbuiquanghuy.android_project.Fragment.NewFragment;
 import vn.nguyenbuiquanghuy.android_project.Fragment.ProfileFragment;
@@ -64,7 +62,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
             getSupportFragmentManager().beginTransaction().replace(R.id.fragment_layout, new ProfileFragment()).commit();
         } else if (item.getItemId() == R.id.nav_logout) {
-            startActivity(new Intent(MainActivity.this, Login.class));
+
         }
         drawerLayout.closeDrawer(GravityCompat.START);
         return true;
