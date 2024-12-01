@@ -1,7 +1,7 @@
 package vn.nguyenbuiquanghuy.android_project.Quiz;
-
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
@@ -20,16 +20,19 @@ import java.util.ArrayList;
 import java.util.List;
 
 import vn.nguyenbuiquanghuy.android_project.R;
-import vn.nguyenbuiquanghuy.android_project.Results.ResultsActivity;
+import vn.nguyenbuiquanghuy.android_project.Result.Results;
 
 public class Quiz extends AppCompatActivity {
-    private TextView tvQuestion;
+    private TextView tvTopic,tvQuestion;
     private RadioGroup rgOptions;
     private RadioButton rbOption1, rbOption2, rbOption3, rbOption4;
     private Button btnNext;
 
     private List<Questions> questionList;
     private int currentQuestionIndex = 0;
+    private List<String> questions = new ArrayList<>();
+    private List<String> correctAnswers = new ArrayList<>();
+    private List<String> selectedAnswers = new ArrayList<>();
 
     private DatabaseReference questionRef;
 
@@ -47,6 +50,7 @@ public class Quiz extends AppCompatActivity {
         }
 
         // Ánh xạ view
+        tvTopic=findViewById(R.id.tv_TopicQuiz);
         tvQuestion = findViewById(R.id.tv_results);
         rgOptions = findViewById(R.id.rg_results);
         rbOption1 = findViewById(R.id.rb_result1);
@@ -62,12 +66,16 @@ public class Quiz extends AppCompatActivity {
         // Tải dữ liệu từ Firebase
         loadQuestionsFromFirebase();
 
+        tvTopic.setText(topic);
         // Xử lý nút Next
-        btnNext.setOnClickListener(v -> {
-            if (rgOptions.getCheckedRadioButtonId() != -1) {
-                checkAnswer();
-            } else {
-                Toast.makeText(Quiz.this, "Vui lòng chọn một đáp án.", Toast.LENGTH_SHORT).show();
+        btnNext.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if (rgOptions.getCheckedRadioButtonId() != -1) {
+                    checkAnswer();
+                } else {
+                    Toast.makeText(Quiz.this, "Vui lòng chọn một đáp án.", Toast.LENGTH_SHORT).show();
+                }
             }
         });
     }
@@ -121,32 +129,36 @@ public class Quiz extends AppCompatActivity {
     }
 
     private void checkAnswer() {
-        Questions currentQuestion = questionList.get(currentQuestionIndex);
+       Questions currentQuestion = questionList.get(currentQuestionIndex);
         String correctAnswer = currentQuestion.getAnswer();
-        List<String> selectedAnswers = new ArrayList<>();
 
 
         String selectedAnswer = "";
         int selectedOptionId = rgOptions.getCheckedRadioButtonId();
 
         if (selectedOptionId == rbOption1.getId()) {
-            selectedAnswer = rbOption1.getText().toString();
-        } else if (selectedOptionId == rbOption2.getId()) {
+          selectedAnswer = rbOption1.getText().toString();
+       } else if (selectedOptionId == rbOption2.getId()) {
             selectedAnswer = rbOption2.getText().toString();
-        } else if (selectedOptionId == rbOption3.getId()) {
-            selectedAnswer = rbOption3.getText().toString();
-        } else if (selectedOptionId == rbOption4.getId()) {
+       } else if (selectedOptionId == rbOption3.getId()) {
+           selectedAnswer = rbOption3.getText().toString();
+      } else if (selectedOptionId == rbOption4.getId()) {
             selectedAnswer = rbOption4.getText().toString();
-        }
-
+       }
+        // Lưu câu hỏi, đáp án đúng, và đáp án đã chọn
+        questions.add(currentQuestion.getQuestion());
+        correctAnswers.add(correctAnswer);
         selectedAnswers.add(selectedAnswer);
-        if (currentQuestionIndex < questionList.size() - 1) {
+
+        if (currentQuestionIndex < questionList.size()-1) {
             currentQuestionIndex++;
             displayQuestion(currentQuestionIndex);
-        } else {
-            Intent intent = new Intent(Quiz.this, ResultsActivity.class);
-           intent.putExtra("questionList", (ArrayList<Questions>) questionList);
-            intent.putExtra("correctAnswers", correctAnswer);
+        }else {
+            // Chuyển sang màn hình kết quả
+            Intent intent = new Intent(Quiz.this, Results.class);
+            intent.putStringArrayListExtra("questions", (ArrayList<String>) questions);
+            intent.putStringArrayListExtra("correctAnswers", (ArrayList<String>) correctAnswers);
+            intent.putStringArrayListExtra("selectedAnswers", (ArrayList<String>) selectedAnswers);
             startActivity(intent);
             finish();
         }

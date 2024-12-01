@@ -51,13 +51,13 @@ public class TopicAdapter extends RecyclerView.Adapter<TopicAdapter.ItemTopicHol
             public void onClick(View view) {
                 Intent intent;
                 if(name.equals("Vocabulary")){
-                    String vocabTopic="vocabulary";
                     intent=new Intent(context, Quiz.class);
-                    intent.putExtra("topic", vocabTopic);
+                    intent.putExtra("topic", TopicView.getTopic());
                     context.startActivity(intent);
                 }
                 else if(name.equals("Grammar")){
                     intent=new Intent(context, Quiz.class);
+                    intent.putExtra("topic", TopicView.getTopic());
                     context.startActivity(intent);
                 }
 
