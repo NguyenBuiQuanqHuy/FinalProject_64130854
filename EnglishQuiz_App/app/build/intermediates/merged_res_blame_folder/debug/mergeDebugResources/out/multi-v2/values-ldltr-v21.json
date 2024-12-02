@@ -1,0 +1,19 @@
+{
+    "logs": [
+        {
+            "outputFile": "vn.nguyenbuiquanghuy.englishquiz_app-mergeDebugResources-33:/values-ldltr-v21/values-ldltr-v21.xml",
+            "map": [
+                {
+                    "source": "C:\\Users\\A DMIN\\.gradle\\caches\\transforms-4\\fa88753306fb63151e73691f55855d77\\transformed\\appcompat-1.7.0\\res\\values-ldltr-v21\\values-ldltr-v21.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "112",
+                        "endOffsets": "163"
+                    }
+                }
+            ]
+        }
+    ]
+}

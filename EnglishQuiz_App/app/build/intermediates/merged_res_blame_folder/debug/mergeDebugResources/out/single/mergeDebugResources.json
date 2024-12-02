@@ -1,0 +1,170 @@
+[
+    {
+        "merged": "vn.nguyenbuiquanghuy.englishquiz_app-debug-35:/mipmap-hdpi_ic_launcher.webp.flat",
+        "source": "vn.nguyenbuiquanghuy.englishquiz_app-main-37:/mipmap-hdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "vn.nguyenbuiquanghuy.englishquiz_app-debug-35:/layout_activity_result.xml.flat",
+        "source": "vn.nguyenbuiquanghuy.englishquiz_app-main-37:/layout/activity_result.xml"
+    },
+    {
+        "merged": "vn.nguyenbuiquanghuy.englishquiz_app-debug-35:/mipmap-xxxhdpi_ic_launcher.webp.flat",
+        "source": "vn.nguyenbuiquanghuy.englishquiz_app-main-37:/mipmap-xxxhdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "vn.nguyenbuiquanghuy.englishquiz_app-debug-35:/drawable_huoucaoco.jpg.flat",
+        "source": "vn.nguyenbuiquanghuy.englishquiz_app-main-37:/drawable/huoucaoco.jpg"
+    },
+    {
+        "merged": "vn.nguyenbuiquanghuy.englishquiz_app-debug-35:/drawable_ic_launcher_foreground.xml.flat",
+        "source": "vn.nguyenbuiquanghuy.englishquiz_app-main-37:/drawable/ic_launcher_foreground.xml"
+    },
+    {
+        "merged": "vn.nguyenbuiquanghuy.englishquiz_app-debug-35:/mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "vn.nguyenbuiquanghuy.englishquiz_app-main-37:/mipmap-anydpi-v26/ic_launcher.xml"
+    },
+    {
+        "merged": "vn.nguyenbuiquanghuy.englishquiz_app-debug-35:/drawable_ic_search.xml.flat",
+        "source": "vn.nguyenbuiquanghuy.englishquiz_app-main-37:/drawable/ic_search.xml"
+    },
+    {
+        "merged": "vn.nguyenbuiquanghuy.englishquiz_app-debug-35:/mipmap-xhdpi_ic_launcher_foreground.webp.flat",
+        "source": "vn.nguyenbuiquanghuy.englishquiz_app-main-37:/mipmap-xhdpi/ic_launcher_foreground.webp"
+    },
+    {
+        "merged": "vn.nguyenbuiquanghuy.englishquiz_app-debug-35:/drawable_item_list_border.xml.flat",
+        "source": "vn.nguyenbuiquanghuy.englishquiz_app-main-37:/drawable/item_list_border.xml"
+    },
+    {
+        "merged": "vn.nguyenbuiquanghuy.englishquiz_app-debug-35:/mipmap-xhdpi_ic_launcher.webp.flat",
+        "source": "vn.nguyenbuiquanghuy.englishquiz_app-main-37:/mipmap-xhdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "vn.nguyenbuiquanghuy.englishquiz_app-debug-35:/layout_activity_quiz.xml.flat",
+        "source": "vn.nguyenbuiquanghuy.englishquiz_app-main-37:/layout/activity_quiz.xml"
+    },
+    {
+        "merged": "vn.nguyenbuiquanghuy.englishquiz_app-debug-35:/layout_fragment_profile.xml.flat",
+        "source": "vn.nguyenbuiquanghuy.englishquiz_app-main-37:/layout/fragment_profile.xml"
+    },
+    {
+        "merged": "vn.nguyenbuiquanghuy.englishquiz_app-debug-35:/layout_fragment_home.xml.flat",
+        "source": "vn.nguyenbuiquanghuy.englishquiz_app-main-37:/layout/fragment_home.xml"
+    },
+    {
+        "merged": "vn.nguyenbuiquanghuy.englishquiz_app-debug-35:/mipmap-xxhdpi_ic_launcher.webp.flat",
+        "source": "vn.nguyenbuiquanghuy.englishquiz_app-main-37:/mipmap-xxhdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "vn.nguyenbuiquanghuy.englishquiz_app-debug-35:/mipmap-xxxhdpi_ic_launcher_foreground.webp.flat",
+        "source": "vn.nguyenbuiquanghuy.englishquiz_app-main-37:/mipmap-xxxhdpi/ic_launcher_foreground.webp"
+    },
+    {
+        "merged": "vn.nguyenbuiquanghuy.englishquiz_app-debug-35:/layout_activity_splash_screen.xml.flat",
+        "source": "vn.nguyenbuiquanghuy.englishquiz_app-main-37:/layout/activity_splash_screen.xml"
+    },
+    {
+        "merged": "vn.nguyenbuiquanghuy.englishquiz_app-debug-35:/drawable_bird.png.flat",
+        "source": "vn.nguyenbuiquanghuy.englishquiz_app-main-37:/drawable/bird.png"
+    },
+    {
+        "merged": "vn.nguyenbuiquanghuy.englishquiz_app-debug-35:/drawable_round_border_button.xml.flat",
+        "source": "vn.nguyenbuiquanghuy.englishquiz_app-main-37:/drawable/round_border_button.xml"
+    },
+    {
+        "merged": "vn.nguyenbuiquanghuy.englishquiz_app-debug-35:/drawable_ic_launcher_background.xml.flat",
+        "source": "vn.nguyenbuiquanghuy.englishquiz_app-main-37:/drawable/ic_launcher_background.xml"
+    },
+    {
+        "merged": "vn.nguyenbuiquanghuy.englishquiz_app-debug-35:/mipmap-xhdpi_ic_launcher_round.webp.flat",
+        "source": "vn.nguyenbuiquanghuy.englishquiz_app-main-37:/mipmap-xhdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "vn.nguyenbuiquanghuy.englishquiz_app-debug-35:/drawable_round_border.xml.flat",
+        "source": "vn.nguyenbuiquanghuy.englishquiz_app-main-37:/drawable/round_border.xml"
+    },
+    {
+        "merged": "vn.nguyenbuiquanghuy.englishquiz_app-debug-35:/mipmap-hdpi_grammar.jpg.flat",
+        "source": "vn.nguyenbuiquanghuy.englishquiz_app-main-37:/mipmap-hdpi/grammar.jpg"
+    },
+    {
+        "merged": "vn.nguyenbuiquanghuy.englishquiz_app-debug-35:/xml_data_extraction_rules.xml.flat",
+        "source": "vn.nguyenbuiquanghuy.englishquiz_app-main-37:/xml/data_extraction_rules.xml"
+    },
+    {
+        "merged": "vn.nguyenbuiquanghuy.englishquiz_app-debug-35:/mipmap-xxxhdpi_ic_launcher_round.webp.flat",
+        "source": "vn.nguyenbuiquanghuy.englishquiz_app-main-37:/mipmap-xxxhdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "vn.nguyenbuiquanghuy.englishquiz_app-debug-35:/mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "vn.nguyenbuiquanghuy.englishquiz_app-main-37:/mipmap-anydpi-v26/ic_launcher_round.xml"
+    },
+    {
+        "merged": "vn.nguyenbuiquanghuy.englishquiz_app-debug-35:/layout_topic_items.xml.flat",
+        "source": "vn.nguyenbuiquanghuy.englishquiz_app-main-37:/layout/topic_items.xml"
+    },
+    {
+        "merged": "vn.nguyenbuiquanghuy.englishquiz_app-debug-35:/menu_nav_menu.xml.flat",
+        "source": "vn.nguyenbuiquanghuy.englishquiz_app-main-37:/menu/nav_menu.xml"
+    },
+    {
+        "merged": "vn.nguyenbuiquanghuy.englishquiz_app-debug-35:/layout_result_items.xml.flat",
+        "source": "vn.nguyenbuiquanghuy.englishquiz_app-main-37:/layout/result_items.xml"
+    },
+    {
+        "merged": "vn.nguyenbuiquanghuy.englishquiz_app-debug-35:/layout_fragment_new.xml.flat",
+        "source": "vn.nguyenbuiquanghuy.englishquiz_app-main-37:/layout/fragment_new.xml"
+    },
+    {
+        "merged": "vn.nguyenbuiquanghuy.englishquiz_app-debug-35:/mipmap-mdpi_ic_launcher_round.webp.flat",
+        "source": "vn.nguyenbuiquanghuy.englishquiz_app-main-37:/mipmap-mdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "vn.nguyenbuiquanghuy.englishquiz_app-debug-35:/mipmap-xxhdpi_ic_launcher_round.webp.flat",
+        "source": "vn.nguyenbuiquanghuy.englishquiz_app-main-37:/mipmap-xxhdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "vn.nguyenbuiquanghuy.englishquiz_app-debug-35:/mipmap-hdpi_animal.jpg.flat",
+        "source": "vn.nguyenbuiquanghuy.englishquiz_app-main-37:/mipmap-hdpi/animal.jpg"
+    },
+    {
+        "merged": "vn.nguyenbuiquanghuy.englishquiz_app-debug-35:/mipmap-hdpi_ic_launcher_foreground.webp.flat",
+        "source": "vn.nguyenbuiquanghuy.englishquiz_app-main-37:/mipmap-hdpi/ic_launcher_foreground.webp"
+    },
+    {
+        "merged": "vn.nguyenbuiquanghuy.englishquiz_app-debug-35:/mipmap-xxhdpi_ic_launcher_foreground.webp.flat",
+        "source": "vn.nguyenbuiquanghuy.englishquiz_app-main-37:/mipmap-xxhdpi/ic_launcher_foreground.webp"
+    },
+    {
+        "merged": "vn.nguyenbuiquanghuy.englishquiz_app-debug-35:/mipmap-mdpi_ic_launcher_foreground.webp.flat",
+        "source": "vn.nguyenbuiquanghuy.englishquiz_app-main-37:/mipmap-mdpi/ic_launcher_foreground.webp"
+    },
+    {
+        "merged": "vn.nguyenbuiquanghuy.englishquiz_app-debug-35:/mipmap-hdpi_vocabulary.jpg.flat",
+        "source": "vn.nguyenbuiquanghuy.englishquiz_app-main-37:/mipmap-hdpi/vocabulary.jpg"
+    },
+    {
+        "merged": "vn.nguyenbuiquanghuy.englishquiz_app-debug-35:/xml_backup_rules.xml.flat",
+        "source": "vn.nguyenbuiquanghuy.englishquiz_app-main-37:/xml/backup_rules.xml"
+    },
+    {
+        "merged": "vn.nguyenbuiquanghuy.englishquiz_app-debug-35:/mipmap-mdpi_ic_launcher.webp.flat",
+        "source": "vn.nguyenbuiquanghuy.englishquiz_app-main-37:/mipmap-mdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "vn.nguyenbuiquanghuy.englishquiz_app-debug-35:/menu_toolbar_nav.xml.flat",
+        "source": "vn.nguyenbuiquanghuy.englishquiz_app-main-37:/menu/toolbar_nav.xml"
+    },
+    {
+        "merged": "vn.nguyenbuiquanghuy.englishquiz_app-debug-35:/mipmap-hdpi_ic_launcher_round.webp.flat",
+        "source": "vn.nguyenbuiquanghuy.englishquiz_app-main-37:/mipmap-hdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "vn.nguyenbuiquanghuy.englishquiz_app-debug-35:/drawable_logo.png.flat",
+        "source": "vn.nguyenbuiquanghuy.englishquiz_app-main-37:/drawable/logo.png"
+    },
+    {
+        "merged": "vn.nguyenbuiquanghuy.englishquiz_app-debug-35:/layout_activity_main.xml.flat",
+        "source": "vn.nguyenbuiquanghuy.englishquiz_app-main-37:/layout/activity_main.xml"
+    }
+]
