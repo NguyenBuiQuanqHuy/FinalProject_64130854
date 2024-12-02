@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-<<<<<<<< HEAD:EnglishQuiz_App/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-port/values-port.xml
-    <bool name="abc_action_bar_embed_tabs">false</bool>
-========
-    <color name="ic_launcher_background">#FFFBBF</color>
->>>>>>>> parent of 647b83c (Revert "Tạo lại dự án"):EnglishQuiz_App/app/src/main/res/values/ic_launcher_background.xml
-</resources>

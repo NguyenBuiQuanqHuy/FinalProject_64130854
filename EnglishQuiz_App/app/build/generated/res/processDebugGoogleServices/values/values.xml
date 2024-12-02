@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <string name="gcm_defaultSenderId" translatable="false">890421860694</string>
-    <string name="google_api_key" translatable="false">AIzaSyBsVU6jL0QTSHQPEyVt3sc6JIx4yWAKO_Y</string>
-    <string name="google_app_id" translatable="false">1:890421860694:android:3dce1875998c293b58def7</string>
-    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyBsVU6jL0QTSHQPEyVt3sc6JIx4yWAKO_Y</string>
-    <string name="google_storage_bucket" translatable="false">englishquiz-app-a77fc.firebasestorage.app</string>
-    <string name="project_id" translatable="false">englishquiz-app-a77fc</string>
-</resources>
