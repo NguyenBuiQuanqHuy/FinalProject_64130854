@@ -41,17 +41,15 @@ public class ResultAdapter extends BaseAdapter {
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
-        // Tạo hoặc tái sử dụng View
         if (convertView == null) {
             convertView = LayoutInflater.from(context).inflate(R.layout.item_result, parent, false);
         }
 
-        // Ánh xạ các TextView trong item_result.xml
+        // Ánh xạ các TextView
         TextView tvQuestion = convertView.findViewById(R.id.tv_question);
         TextView tvCorrectAnswer = convertView.findViewById(R.id.tv_correct_answer);
         TextView tvSelectedAnswer = convertView.findViewById(R.id.tv_selected_answer);
 
-        // Kiểm tra nếu đáp án chọn giống đáp án đúng
         if (correctAnswers.get(position).equals(selectedAnswers.get(position))) {
             // Đáp án chọn đúng, thay đổi màu xanh
             tvSelectedAnswer.setTextColor(context.getResources().getColor(android.R.color.holo_green_dark ));

@@ -36,12 +36,9 @@ public class TopicAdapter extends RecyclerView.Adapter<TopicAdapter.ItemTopicHol
 
     @Override
     public void onBindViewHolder(@NonNull ItemTopicHolder holder, int position) {
-        //Lấy đối tượng hiển thị
         Topic TopicView=listTopicData.get(position);
-        //Trích Thông tin
         String name =TopicView.getTopic();
         String Anh=TopicView.getImageFile();
-        //Đặt vào các trường thông tin của holder
         holder.tvTopicName.setText(name);
         //Đặt ảnh
         String packedName=holder.itemView.getContext().getPackageName();

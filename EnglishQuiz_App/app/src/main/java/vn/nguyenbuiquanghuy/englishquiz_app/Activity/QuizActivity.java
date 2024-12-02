@@ -34,7 +34,7 @@ public class QuizActivity extends AppCompatActivity {
     List<String> correctAnswers = new ArrayList<>();
     List<String> selectedAnswers = new ArrayList<>();
 
-    private DatabaseReference questionRef;
+    DatabaseReference questionRef;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -143,7 +143,7 @@ public class QuizActivity extends AppCompatActivity {
             rbOption3.setText(question.getOption3());
             rbOption4.setText(question.getOption4());
 
-            rgOptions.clearCheck(); // Xóa lựa chọn cũ
+            rgOptions.clearCheck();
         }
     }
 
