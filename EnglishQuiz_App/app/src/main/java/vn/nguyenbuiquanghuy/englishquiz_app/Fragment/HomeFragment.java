@@ -13,8 +13,8 @@ import android.view.ViewGroup;
 import java.util.ArrayList;
 
 import vn.nguyenbuiquanghuy.englishquiz_app.R;
-import vn.nguyenbuiquanghuy.englishquiz_app.Topic.Topic;
-import vn.nguyenbuiquanghuy.englishquiz_app.Topic.TopicAdapter;
+import vn.nguyenbuiquanghuy.englishquiz_app.Model.Topic;
+import vn.nguyenbuiquanghuy.englishquiz_app.Adapter.TopicAdapter;
 
 public class HomeFragment extends Fragment {
     TopicAdapter topicAdapter;

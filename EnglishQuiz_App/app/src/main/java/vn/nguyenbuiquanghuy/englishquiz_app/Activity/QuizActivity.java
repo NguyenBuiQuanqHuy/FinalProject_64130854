@@ -1,4 +1,4 @@
-package vn.nguyenbuiquanghuy.englishquiz_app.Quiz;
+package vn.nguyenbuiquanghuy.englishquiz_app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -19,8 +19,8 @@ import com.google.firebase.database.ValueEventListener;
 import java.util.ArrayList;
 import java.util.List;
 
+import vn.nguyenbuiquanghuy.englishquiz_app.Model.Questions;
 import vn.nguyenbuiquanghuy.englishquiz_app.R;
-import vn.nguyenbuiquanghuy.englishquiz_app.Result.ResultActivity;
 
 public class QuizActivity extends AppCompatActivity {
     private TextView tvTopic,tvQuestion;

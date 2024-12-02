@@ -1,4 +1,4 @@
-package vn.nguyenbuiquanghuy.englishquiz_app.Result;
+package vn.nguyenbuiquanghuy.englishquiz_app.Adapter;
 
 import android.content.Context;
 import android.view.LayoutInflater;

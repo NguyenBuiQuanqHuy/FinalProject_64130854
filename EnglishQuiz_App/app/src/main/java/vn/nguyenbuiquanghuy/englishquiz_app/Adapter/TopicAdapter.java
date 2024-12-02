@@ -1,4 +1,4 @@
-package vn.nguyenbuiquanghuy.englishquiz_app.Topic;
+package vn.nguyenbuiquanghuy.englishquiz_app.Adapter;
 import android.content.Context;
 import android.content.Intent;
 import android.view.LayoutInflater;
@@ -10,7 +10,8 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 import java.util.ArrayList;
 
-import vn.nguyenbuiquanghuy.englishquiz_app.Quiz.QuizActivity;
+import vn.nguyenbuiquanghuy.englishquiz_app.Model.Topic;
+import vn.nguyenbuiquanghuy.englishquiz_app.Activity.QuizActivity;
 import vn.nguyenbuiquanghuy.englishquiz_app.R;
 
 

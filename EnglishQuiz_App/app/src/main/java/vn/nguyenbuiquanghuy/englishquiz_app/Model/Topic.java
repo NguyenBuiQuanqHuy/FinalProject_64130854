@@ -1,4 +1,4 @@
-package vn.nguyenbuiquanghuy.englishquiz_app.Topic;
+package vn.nguyenbuiquanghuy.englishquiz_app.Model;
 
 public class Topic {
     String imageFile;

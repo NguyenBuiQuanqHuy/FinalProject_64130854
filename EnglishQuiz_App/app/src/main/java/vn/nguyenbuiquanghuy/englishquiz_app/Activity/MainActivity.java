@@ -1,4 +1,4 @@
-package vn.nguyenbuiquanghuy.englishquiz_app;
+package vn.nguyenbuiquanghuy.englishquiz_app.Activity;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
@@ -16,6 +16,7 @@ import com.google.android.material.navigation.NavigationView;
 import vn.nguyenbuiquanghuy.englishquiz_app.Fragment.HomeFragment;
 import vn.nguyenbuiquanghuy.englishquiz_app.Fragment.NewFragment;
 import vn.nguyenbuiquanghuy.englishquiz_app.Fragment.ProfileFragment;
+import vn.nguyenbuiquanghuy.englishquiz_app.R;
 
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
     private DrawerLayout drawerLayout;

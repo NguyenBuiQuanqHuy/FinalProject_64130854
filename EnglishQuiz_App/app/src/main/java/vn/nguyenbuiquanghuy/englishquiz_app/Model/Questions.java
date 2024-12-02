@@ -1,4 +1,4 @@
-package vn.nguyenbuiquanghuy.englishquiz_app.Quiz;
+package vn.nguyenbuiquanghuy.englishquiz_app.Model;
 
 public class Questions {
     private String question;

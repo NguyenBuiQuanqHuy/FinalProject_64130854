@@ -1,4 +1,4 @@
-package vn.nguyenbuiquanghuy.englishquiz_app.Result;
+package vn.nguyenbuiquanghuy.englishquiz_app.Activity;
 
 import android.os.Bundle;
 import android.widget.ListView;
@@ -7,6 +7,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import java.util.ArrayList;
 
+import vn.nguyenbuiquanghuy.englishquiz_app.Adapter.ResultAdapter;
 import vn.nguyenbuiquanghuy.englishquiz_app.R;
 
 public class ResultActivity extends AppCompatActivity {
