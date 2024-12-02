@@ -10,7 +10,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 import java.util.ArrayList;
 
-import vn.nguyenbuiquanghuy.android_project.Quiz.Quiz;
+import vn.nguyenbuiquanghuy.android_project.Quiz.QuizActivity;
 import vn.nguyenbuiquanghuy.android_project.R;
 
 public class TopicAdapter extends RecyclerView.Adapter<TopicAdapter.ItemTopicHolder> {
@@ -51,12 +51,12 @@ public class TopicAdapter extends RecyclerView.Adapter<TopicAdapter.ItemTopicHol
             public void onClick(View view) {
                 Intent intent;
                 if(name.equals("Vocabulary")){
-                    intent=new Intent(context, Quiz.class);
+                    intent=new Intent(context, QuizActivity.class);
                     intent.putExtra("topic", TopicView.getTopic());
                     context.startActivity(intent);
                 }
                 else if(name.equals("Grammar")){
-                    intent=new Intent(context, Quiz.class);
+                    intent=new Intent(context, QuizActivity.class);
                     intent.putExtra("topic", TopicView.getTopic());
                     context.startActivity(intent);
                 }

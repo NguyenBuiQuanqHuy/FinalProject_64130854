@@ -20,9 +20,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 import vn.nguyenbuiquanghuy.android_project.R;
-import vn.nguyenbuiquanghuy.android_project.Result.Results;
+import vn.nguyenbuiquanghuy.android_project.Result.ResultActivity;
 
-public class Quiz extends AppCompatActivity {
+public class QuizActivity extends AppCompatActivity {
     private TextView tvTopic,tvQuestion;
     private RadioGroup rgOptions;
     private RadioButton rbOption1, rbOption2, rbOption3, rbOption4;
@@ -74,7 +74,7 @@ public class Quiz extends AppCompatActivity {
                 if (rgOptions.getCheckedRadioButtonId() != -1) {
                     checkAnswer();
                 } else {
-                    Toast.makeText(Quiz.this, "Vui lòng chọn một đáp án.", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(QuizActivity.this, "Vui lòng chọn một đáp án.", Toast.LENGTH_SHORT).show();
                 }
             }
         });
@@ -97,18 +97,18 @@ public class Quiz extends AppCompatActivity {
                     if (!questionList.isEmpty()) {
                         displayQuestion(currentQuestionIndex);
                     } else {
-                        Toast.makeText(Quiz.this, "Không có câu hỏi nào cho chủ đề này.", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(QuizActivity.this, "Không có câu hỏi nào cho chủ đề này.", Toast.LENGTH_SHORT).show();
                         finish();
                     }
                 } else {
-                    Toast.makeText(Quiz.this, "Không có dữ liệu trong Firebase.", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(QuizActivity.this, "Không có dữ liệu trong Firebase.", Toast.LENGTH_SHORT).show();
                     finish();
                 }
             }
 
             @Override
             public void onCancelled(DatabaseError databaseError) {
-                Toast.makeText(Quiz.this, "Lỗi tải dữ liệu: " + databaseError.getMessage(), Toast.LENGTH_SHORT).show();
+                Toast.makeText(QuizActivity.this, "Lỗi tải dữ liệu: " + databaseError.getMessage(), Toast.LENGTH_SHORT).show();
                 finish();
             }
         });
@@ -155,7 +155,7 @@ public class Quiz extends AppCompatActivity {
             displayQuestion(currentQuestionIndex);
         }else {
             // Chuyển sang màn hình kết quả
-            Intent intent = new Intent(Quiz.this, Results.class);
+            Intent intent = new Intent(QuizActivity.this, ResultActivity.class);
             intent.putStringArrayListExtra("questions", (ArrayList<String>) questions);
             intent.putStringArrayListExtra("correctAnswers", (ArrayList<String>) correctAnswers);
             intent.putStringArrayListExtra("selectedAnswers", (ArrayList<String>) selectedAnswers);

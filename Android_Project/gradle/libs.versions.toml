@@ -14,6 +14,8 @@ supabaseAndroid = "1.3.0"
 supabaseAndroidVersion = "1.3.0"
 navigationFragment = "2.8.1"
 navigationUi = "2.8.1"
+firebasePerf = "21.0.2"
+googleFirebaseFirebasePerf = "1.4.2"
 
 [libraries]
 junit = { group = "junit", name = "junit", version.ref = "junit" }
@@ -29,8 +31,10 @@ supabase-android = { module = "org.supabase:supabase-android", version.ref = "su
 supabase-supabase-android = { module = "io.supabase:supabase-android", version.ref = "supabaseAndroidVersion" }
 navigation-fragment = { group = "androidx.navigation", name = "navigation-fragment", version.ref = "navigationFragment" }
 navigation-ui = { group = "androidx.navigation", name = "navigation-ui", version.ref = "navigationUi" }
+firebase-perf = { group = "com.google.firebase", name = "firebase-perf", version.ref = "firebasePerf" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
 google-gms-google-services = { id = "com.google.gms.google-services", version.ref = "googleGmsGoogleServices" }
+google-firebase-firebase-perf = { id = "com.google.firebase.firebase-perf", version.ref = "googleFirebaseFirebasePerf" }
 

@@ -1,13 +1,13 @@
 {
   "project_info": {
-    "project_number": "921972730835",
-    "project_id": "finalproject-e21fb",
-    "storage_bucket": "finalproject-e21fb.firebasestorage.app"
+    "project_number": "784180719432",
+    "project_id": "englishquiz-app-74aa7",
+    "storage_bucket": "englishquiz-app-74aa7.firebasestorage.app"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:921972730835:android:74da87bf077da1d0725d26",
+        "mobilesdk_app_id": "1:784180719432:android:777bd112df607d21d04d7d",
         "android_client_info": {
           "package_name": "vn.nguyenbuiquanghuy.android_project"
         }
@@ -15,7 +15,7 @@
       "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyDTUCoZROELDqflNWA2JD3JphU1uOHsAU0"
+          "current_key": "AIzaSyA29MeuiRegIjKDZ-lTQOifDYEzK40eZK4"
         }
       ],
       "services": {
