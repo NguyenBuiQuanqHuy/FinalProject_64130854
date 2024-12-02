@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "784180719432",
+    "firebase_url": "https://englishquiz-app-74aa7-default-rtdb.firebaseio.com",
+    "project_id": "englishquiz-app-74aa7",
+    "storage_bucket": "englishquiz-app-74aa7.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:784180719432:android:b698f22666144995d04d7d",
+        "android_client_info": {
+          "package_name": "vn.nguyenbuiquanghuy.englishquiz_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA29MeuiRegIjKDZ-lTQOifDYEzK40eZK4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
