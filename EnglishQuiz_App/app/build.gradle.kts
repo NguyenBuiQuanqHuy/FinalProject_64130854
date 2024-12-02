@@ -5,7 +5,7 @@ plugins {
 }
 
 android {
-    namespace = "vn.nguyenbuiquanghuy.android_project"
+    namespace = "vn.nguyenbuiquanghuy.englishquiz_app"
     compileSdkVersion(rootProject.extra["compileSdkVersion"] as Int)
 
     defaultConfig {

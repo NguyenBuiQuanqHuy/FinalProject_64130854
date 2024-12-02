@@ -13,6 +13,7 @@ import java.util.ArrayList;
 import vn.nguyenbuiquanghuy.englishquiz_app.Quiz.QuizActivity;
 import vn.nguyenbuiquanghuy.englishquiz_app.R;
 
+
 public class TopicAdapter extends RecyclerView.Adapter<TopicAdapter.ItemTopicHolder> {
     Context context;
     ArrayList<Topic> listTopicData;
