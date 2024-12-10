@@ -19,6 +19,7 @@ import vn.nguyenbuiquanghuy.englishquiz_app.Adapter.TopicAdapter;
 public class HomeFragment extends Fragment {
     TopicAdapter topicAdapter;
     ArrayList<Topic> TopicRecycler;
+    ArrayList<Topic> filteredTopics;
     RecyclerView recyclerView;
 
 
@@ -29,13 +30,15 @@ public class HomeFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_home, container, false);
 
         TopicRecycler=getTopicRecycler();
+        filteredTopics = new ArrayList<>(TopicRecycler);
         recyclerView=view.findViewById(R.id.rv_topics);
         RecyclerView.LayoutManager layoutManager=new LinearLayoutManager(getActivity());
         recyclerView.setLayoutManager(layoutManager);
-        topicAdapter=new TopicAdapter(getActivity(),TopicRecycler);
+        topicAdapter=new TopicAdapter(getActivity(),filteredTopics);
         recyclerView.setAdapter(topicAdapter);
         return view;
     }
+
 
     ArrayList<Topic> getTopicRecycler(){
         ArrayList<Topic> ListData=new ArrayList<>();
@@ -45,5 +48,21 @@ public class HomeFragment extends Fragment {
         ListData.add(new Topic("vehicle","Vehicle"));
         ListData.add(new Topic("fruit","Fruit"));
         return ListData;
+    }
+
+    public void filterTopics(String query) {
+        filteredTopics.clear();
+
+        if (query.isEmpty()) {
+            filteredTopics.addAll(TopicRecycler);
+        } else {
+            String lowerCaseQuery = query.toLowerCase();
+            for (Topic topic : TopicRecycler) {
+                if (topic.getTopic().toLowerCase().contains(lowerCaseQuery)) {
+                    filteredTopics.add(topic);
+                }
+            }
+        }
+        topicAdapter.notifyDataSetChanged();
     }
 }

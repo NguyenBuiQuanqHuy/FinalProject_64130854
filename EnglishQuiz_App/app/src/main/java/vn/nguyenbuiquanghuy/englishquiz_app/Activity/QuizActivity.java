@@ -1,6 +1,7 @@
 package vn.nguyenbuiquanghuy.englishquiz_app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.CountDownTimer;
 import android.view.View;
 import android.widget.Button;
 import android.widget.RadioButton;
@@ -23,35 +24,33 @@ import vn.nguyenbuiquanghuy.englishquiz_app.Model.Questions;
 import vn.nguyenbuiquanghuy.englishquiz_app.R;
 
 public class QuizActivity extends AppCompatActivity {
-    TextView tvTopic,tvQuestion;
+    TextView tvTopic,tvQuestion,tvTimer;
     RadioGroup rgOptions;
     RadioButton rbOption1, rbOption2, rbOption3, rbOption4;
     Button btnNext,btnExit;
-
     List<Questions> questionList;
     int currentQuestionIndex = 0;
     List<String> questions = new ArrayList<>();
     List<String> correctAnswers = new ArrayList<>();
     List<String> selectedAnswers = new ArrayList<>();
-
     DatabaseReference questionRef;
+    CountDownTimer countDownTimer;
+    static final int TIMER_DURATION = 10000; // 30 giây
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_question);
-
-        // Lấy chủ đề từ Intent
         String topic = getIntent().getStringExtra("topic");
         if (topic == null) {
             Toast.makeText(this, "Không tìm thấy chủ đề!", Toast.LENGTH_SHORT).show();
             finish();
             return;
         }
-
-        // Ánh xạ view
         tvTopic=findViewById(R.id.tv_TopicQuiz);
         tvQuestion = findViewById(R.id.tv_results);
+        tvTimer = findViewById(R.id.tv_timer);
         rgOptions = findViewById(R.id.rg_results);
         rbOption1 = findViewById(R.id.rb_result1);
         rbOption2 = findViewById(R.id.rb_result2);
@@ -59,16 +58,12 @@ public class QuizActivity extends AppCompatActivity {
         rbOption4 = findViewById(R.id.rb_result4);
         btnNext = findViewById(R.id.btn_next);
         btnExit =findViewById(R.id.btn_exit);
-
-        // Kết nối Firebase
         FirebaseDatabase database = FirebaseDatabase.getInstance();
         questionRef = database.getReference("questions").child(topic);
 
-        // Tải dữ liệu từ Firebase
         loadQuestionsFromFirebase();
 
         tvTopic.setText(topic);
-        // Xử lý nút Next
         btnNext.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -79,8 +74,6 @@ public class QuizActivity extends AppCompatActivity {
                 }
             }
         });
-
-        // Xử lý nút Exit để quay về màn hình chính
         btnExit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -104,15 +97,11 @@ public class QuizActivity extends AppCompatActivity {
                             questionList.add(question);
                         }
                     }
-
-                    // Lọc 5 câu hỏi ngẫu nhiên nếu có ít nhất 5 câu hỏi
                     if (questionList.size() > 1) {
                         List<Questions> randomQuestions = getRandomQuestions(5);
                         questionList.clear();
                         questionList.addAll(randomQuestions);
                     }
-
-                    // Kiểm tra nếu có câu hỏi để hiển thị
                     if (!questionList.isEmpty()) {
                         displayQuestion(currentQuestionIndex);
                     } else {
@@ -134,27 +123,44 @@ public class QuizActivity extends AppCompatActivity {
     }
 
     private void displayQuestion(int index) {
+        if (countDownTimer != null) {
+            countDownTimer.cancel();
+        }
         if (index < questionList.size()) {
             Questions question = questionList.get(index);
             tvQuestion.setText(question.getQuestion());
-
             rbOption1.setText(question.getOption1());
             rbOption2.setText(question.getOption2());
             rbOption3.setText(question.getOption3());
             rbOption4.setText(question.getOption4());
-
             rgOptions.clearCheck();
         }
+        startCountDownTimer();
+    }
+
+    private void startCountDownTimer() {
+        countDownTimer = new CountDownTimer(TIMER_DURATION, 1000) {
+            @Override
+            public void onTick(long millisUntilFinished) {
+                tvTimer.setText("Time left: " + millisUntilFinished / 1000 + "s");
+            }
+
+            @Override
+            public void onFinish() {
+                tvTimer.setText("Time's up!");
+                checkAnswer(); // Tự động chuyển sang câu tiếp theo nếu hết giờ
+            }
+        };
+        countDownTimer.start();
     }
 
     // Phương thức để lấy 5 câu hỏi ngẫu nhiên
     private List<Questions> getRandomQuestions(int count) {
         List<Questions> randomQuestions = new ArrayList<>();
         List<Questions> shuffledList = new ArrayList<>(questionList);
-        java.util.Collections.shuffle(shuffledList); // Xáo trộn danh sách câu hỏi
-
+        java.util.Collections.shuffle(shuffledList);
         for (int i = 0; i < count; i++) {
-            randomQuestions.add(shuffledList.get(i)); // Lấy 5 câu hỏi đầu tiên từ danh sách đã xáo trộn
+            randomQuestions.add(shuffledList.get(i));
         }
 
         return randomQuestions;

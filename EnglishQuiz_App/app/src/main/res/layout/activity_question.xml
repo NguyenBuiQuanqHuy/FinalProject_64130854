@@ -32,6 +32,19 @@
             android:textStyle="bold" />
     </LinearLayout>
 
+    <!-- Thời gian đếm ngược -->
+    <TextView
+        android:id="@+id/tv_timer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="12dp"
+        android:gravity="center"
+        android:padding="8dp"
+        android:text="Time left: 10s"
+        android:textColor="#FF0000"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
     <!-- Tiêu đề câu hỏi -->
     <TextView
         android:id="@+id/tv_results"
