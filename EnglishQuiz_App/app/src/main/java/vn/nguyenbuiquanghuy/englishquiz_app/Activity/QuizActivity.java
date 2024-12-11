@@ -148,7 +148,7 @@ public class QuizActivity extends AppCompatActivity {
             @Override
             public void onFinish() {
                 tvTimer.setText("Time's up!");
-                checkAnswer(); // Tự động chuyển sang câu tiếp theo nếu hết giờ
+                   checkAnswer();
             }
         };
         countDownTimer.start();
@@ -167,6 +167,9 @@ public class QuizActivity extends AppCompatActivity {
     }
 
     private void checkAnswer() {
+        if (countDownTimer != null) {
+            countDownTimer.cancel(); // Hủy bộ đếm thời gian
+        }
        Questions currentQuestion = questionList.get(currentQuestionIndex);
         String correctAnswer = currentQuestion.getAnswer();
 
