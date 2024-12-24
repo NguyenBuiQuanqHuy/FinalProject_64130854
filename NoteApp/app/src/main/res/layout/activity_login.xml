@@ -58,14 +58,13 @@
             android:layout_marginTop="12dp"
             android:background="@drawable/rounded_corner"
             android:textSize="20dp" />
-        
 
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/edit_text_Confirm"
+            android:id="@+id/edit_text_Password"
             android:inputType="textPassword"
-            android:hint="Nhập lại mật khẩu"
+            android:hint="Nhập mật khẩu"
             android:padding="16dp"
             android:layout_marginTop="12dp"
             android:background="@drawable/rounded_corner"
