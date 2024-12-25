@@ -1,4 +1,4 @@
-package thick.nguyenbuiquanghuy.noteapp;
+package thick.nguyenbuiquanghuy.noteapp.Activity;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -6,6 +6,8 @@ import android.os.Handler;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
+
+import thick.nguyenbuiquanghuy.noteapp.R;
 
 
 public class SplashActivity extends AppCompatActivity {
