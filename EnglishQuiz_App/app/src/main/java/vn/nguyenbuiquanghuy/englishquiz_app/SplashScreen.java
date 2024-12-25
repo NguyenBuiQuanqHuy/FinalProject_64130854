@@ -3,8 +3,10 @@ package vn.nguyenbuiquanghuy.englishquiz_app;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
+
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
+
 import vn.nguyenbuiquanghuy.englishquiz_app.Activity.MainActivity;
 
 public class SplashScreen extends AppCompatActivity {

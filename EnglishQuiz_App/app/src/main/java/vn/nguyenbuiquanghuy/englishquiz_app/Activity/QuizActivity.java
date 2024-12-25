@@ -8,14 +8,18 @@ import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.Toast;
+
 import androidx.appcompat.app.AppCompatActivity;
+
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
+
 import java.util.ArrayList;
 import java.util.List;
+
 import vn.nguyenbuiquanghuy.englishquiz_app.Model.Questions;
 import vn.nguyenbuiquanghuy.englishquiz_app.R;
 
@@ -32,6 +36,7 @@ public class QuizActivity extends AppCompatActivity {
     DatabaseReference questionRef;
     CountDownTimer countDownTimer;
     static final int TIMER_DURATION = 10000; // 30 giây
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -72,25 +77,19 @@ public class QuizActivity extends AppCompatActivity {
         btnExit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (countDownTimer != null) {
-                    countDownTimer.cancel();
-                    countDownTimer = null;
-                }
-
                 Intent intent=new Intent(QuizActivity.this, MainActivity.class);
-                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
                 startActivity(intent);
                 finish();
             }
         });
     }
 
+    // Hàm lấy câu hỏi trắc nghiệm từ Firebase
     private void loadQuestionsFromFirebase() {
         questionList = new ArrayList<>();
         questionRef.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
-                questionList.clear();
                 if (dataSnapshot.exists()) {
                     for (DataSnapshot snapshot : dataSnapshot.getChildren()) {
                         Questions question = snapshot.getValue(Questions.class);
@@ -155,6 +154,7 @@ public class QuizActivity extends AppCompatActivity {
         countDownTimer.start();
     }
 
+    // Phương thức để lấy 5 câu hỏi ngẫu nhiên
     private List<Questions> getRandomQuestions(int count) {
         List<Questions> randomQuestions = new ArrayList<>();
         List<Questions> shuffledList = new ArrayList<>(questionList);
@@ -168,10 +168,11 @@ public class QuizActivity extends AppCompatActivity {
 
     private void checkAnswer() {
         if (countDownTimer != null) {
-            countDownTimer.cancel();
+            countDownTimer.cancel(); // Hủy bộ đếm thời gian
         }
        Questions currentQuestion = questionList.get(currentQuestionIndex);
         String correctAnswer = currentQuestion.getAnswer();
+
 
         String selectedAnswer = "";
         int selectedOptionId = rgOptions.getCheckedRadioButtonId();
@@ -185,7 +186,7 @@ public class QuizActivity extends AppCompatActivity {
       } else if (selectedOptionId == rbOption4.getId()) {
             selectedAnswer = rbOption4.getText().toString();
        }
-
+        // Lưu câu hỏi, đáp án đúng, và đáp án đã chọn
         questions.add(currentQuestion.getQuestion());
         correctAnswers.add(correctAnswer);
         selectedAnswers.add(selectedAnswer);
@@ -194,6 +195,7 @@ public class QuizActivity extends AppCompatActivity {
             currentQuestionIndex++;
             displayQuestion(currentQuestionIndex);
         } else {
+            // Chuyển sang màn hình kết quả
             Intent intent = new Intent(QuizActivity.this, ResultActivity.class);
             intent.putStringArrayListExtra("questions", (ArrayList<String>) questions);
             intent.putStringArrayListExtra("correctAnswers", (ArrayList<String>) correctAnswers);

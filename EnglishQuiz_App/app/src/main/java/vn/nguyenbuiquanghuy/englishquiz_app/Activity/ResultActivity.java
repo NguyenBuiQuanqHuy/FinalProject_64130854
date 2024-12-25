@@ -23,22 +23,26 @@ public class ResultActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_results);
 
+        // Ánh xạ ListView
         lvResults = findViewById(R.id.lv_results);
         btnRetry=findViewById(R.id.btn_retry);
         btnExit=findViewById(R.id.btn_exit);
 
+        // Lấy dữ liệu từ Intent
         ArrayList<String> questions = getIntent().getStringArrayListExtra("questions");
         ArrayList<String> correctAnswers = getIntent().getStringArrayListExtra("correctAnswers");
         ArrayList<String> selectedAnswers = getIntent().getStringArrayListExtra("selectedAnswers");
         String topic = getIntent().getStringExtra("topic");
+        // Khởi tạo adapter và gán vào ListView
         resultAdapter = new ResultAdapter(ResultActivity.this, questions, correctAnswers, selectedAnswers);
         lvResults.setAdapter(resultAdapter);
 
+        // Xử lý nút Retry để làm lại
         btnRetry.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent= new Intent(ResultActivity.this, QuizActivity.class);
-                intent.putExtra("topic", topic);
+                intent.putExtra("topic", topic); // Gửi lại chủ đề đã chọn
                 startActivity(intent);
                 finish();
             }

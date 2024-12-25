@@ -6,7 +6,9 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.TextView;
+
 import java.util.List;
+
 import vn.nguyenbuiquanghuy.englishquiz_app.R;
 
 public class ResultAdapter extends BaseAdapter {
@@ -43,6 +45,7 @@ public class ResultAdapter extends BaseAdapter {
             convertView = LayoutInflater.from(context).inflate(R.layout.item_result, parent, false);
         }
 
+        // Ánh xạ các TextView
         TextView tvQuestion = convertView.findViewById(R.id.tv_question);
         TextView tvCorrectAnswer = convertView.findViewById(R.id.tv_correct_answer);
         TextView tvSelectedAnswer = convertView.findViewById(R.id.tv_selected_answer);
@@ -55,6 +58,7 @@ public class ResultAdapter extends BaseAdapter {
             tvSelectedAnswer.setTextColor(context.getResources().getColor(android.R.color.holo_red_dark));
         }
 
+        // Cập nhật dữ liệu vào các TextView
         tvQuestion.setText(questions.get(position));
         tvCorrectAnswer.setText("True: " + correctAnswers.get(position));
         tvSelectedAnswer.setText("Your Answer: " + selectedAnswers.get(position));

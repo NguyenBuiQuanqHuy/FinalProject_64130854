@@ -1,4 +1,5 @@
 package vn.nguyenbuiquanghuy.englishquiz_app.Activity;
+
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AlertDialog;
@@ -8,10 +9,13 @@ import androidx.appcompat.widget.Toolbar;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.Fragment;
+
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+
 import com.google.android.material.navigation.NavigationView;
+
 import vn.nguyenbuiquanghuy.englishquiz_app.Fragment.HomeFragment;
 import vn.nguyenbuiquanghuy.englishquiz_app.Fragment.NewFragment;
 import vn.nguyenbuiquanghuy.englishquiz_app.Fragment.ProfileFragment;
@@ -19,11 +23,14 @@ import vn.nguyenbuiquanghuy.englishquiz_app.R;
 
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
     private DrawerLayout drawerLayout;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        Toolbar toolbar = findViewById(R.id.toolbar);
+
+        Toolbar toolbar = findViewById(R.id.toolbar); //Ignore red line errors
         setSupportActionBar(toolbar);
         drawerLayout = findViewById(R.id.drawer_layout);
         NavigationView navigationView = findViewById(R.id.nav_view);
@@ -45,6 +52,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         } else if (item.getItemId() == R.id.nav_follow) {
             getSupportFragmentManager().beginTransaction().replace(R.id.fragment_layout, new NewFragment()).commit();
         } else if (item.getItemId() == R.id.nav_profile) {
+
             getSupportFragmentManager().beginTransaction().replace(R.id.fragment_layout, new ProfileFragment()).commit();
         } else if (item.getItemId() == R.id.nav_logout) {
             new AlertDialog.Builder(this)
@@ -60,6 +68,12 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         drawerLayout.closeDrawer(GravityCompat.START);
         return true;
     }
+
+//    @Override
+//    public boolean onCreateOptionsMenu(Menu menu) {
+//        getMenuInflater().inflate(R.menu.toolbar_nav,menu);
+//        return true;
+//    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -91,4 +105,5 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             ((HomeFragment) currentFragment).filterTopics(query);
         }
     }
+
 }
