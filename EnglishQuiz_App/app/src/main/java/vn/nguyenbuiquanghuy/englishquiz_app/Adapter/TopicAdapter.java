@@ -38,6 +38,7 @@ public class TopicAdapter extends RecyclerView.Adapter<TopicAdapter.ItemTopicHol
         Topic TopicView=listTopicData.get(position);
         String name =TopicView.getTopic();
         String Anh=TopicView.getImageFile();
+
         holder.tvTopicName.setText(name);
 
         String packedName=holder.itemView.getContext().getPackageName();
