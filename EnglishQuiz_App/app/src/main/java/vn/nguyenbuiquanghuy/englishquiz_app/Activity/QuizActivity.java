@@ -1,4 +1,5 @@
 package vn.nguyenbuiquanghuy.englishquiz_app.Activity;
+
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.CountDownTimer;
@@ -11,12 +12,13 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.google.firebase.database.DataSnapshot;
-import com.google.firebase.database.DatabaseError;
-import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.database.ValueEventListener;
+import org.json.JSONException;
+import org.json.JSONObject;
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -24,31 +26,31 @@ import vn.nguyenbuiquanghuy.englishquiz_app.Model.Questions;
 import vn.nguyenbuiquanghuy.englishquiz_app.R;
 
 public class QuizActivity extends AppCompatActivity {
-    TextView tvTopic,tvQuestion,tvTimer;
+    TextView tvTopic, tvQuestion, tvTimer;
     RadioGroup rgOptions;
     RadioButton rbOption1, rbOption2, rbOption3, rbOption4;
-    Button btnNext,btnExit;
+    Button btnNext, btnExit;
     List<Questions> questionList;
     int currentQuestionIndex = 0;
     List<String> questions = new ArrayList<>();
     List<String> correctAnswers = new ArrayList<>();
     List<String> selectedAnswers = new ArrayList<>();
-    DatabaseReference questionRef;
     CountDownTimer countDownTimer;
     static final int TIMER_DURATION = 10000; // 30 giây
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_question);
+
         String topic = getIntent().getStringExtra("topic");
         if (topic == null) {
             Toast.makeText(this, "Không tìm thấy chủ đề!", Toast.LENGTH_SHORT).show();
             finish();
             return;
         }
-        tvTopic=findViewById(R.id.tv_TopicQuiz);
+
+        tvTopic = findViewById(R.id.tv_TopicQuiz);
         tvQuestion = findViewById(R.id.tv_results);
         tvTimer = findViewById(R.id.tv_timer);
         rgOptions = findViewById(R.id.rg_results);
@@ -57,13 +59,12 @@ public class QuizActivity extends AppCompatActivity {
         rbOption3 = findViewById(R.id.rb_result3);
         rbOption4 = findViewById(R.id.rb_result4);
         btnNext = findViewById(R.id.btn_next);
-        btnExit =findViewById(R.id.btn_exit);
-        FirebaseDatabase database = FirebaseDatabase.getInstance();
-        questionRef = database.getReference("questions").child(topic);
+        btnExit = findViewById(R.id.btn_exit);
 
-        loadQuestionsFromFirebase();
+        loadQuestionsFromJson(topic);
 
         tvTopic.setText(topic);
+
         btnNext.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -74,58 +75,66 @@ public class QuizActivity extends AppCompatActivity {
                 }
             }
         });
+
         btnExit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent=new Intent(QuizActivity.this, MainActivity.class);
+                Intent intent = new Intent(QuizActivity.this, MainActivity.class);
                 startActivity(intent);
                 finish();
             }
         });
     }
 
-    // Hàm lấy câu hỏi trắc nghiệm từ Firebase
-    private void loadQuestionsFromFirebase() {
-        questionList = new ArrayList<>();
-        questionRef.addListenerForSingleValueEvent(new ValueEventListener() {
-            @Override
-            public void onDataChange(DataSnapshot dataSnapshot) {
-                if (dataSnapshot.exists()) {
-                    for (DataSnapshot snapshot : dataSnapshot.getChildren()) {
-                        Questions question = snapshot.getValue(Questions.class);
-                        if (question != null) {
-                            questionList.add(question);
-                        }
-                    }
-                    if (questionList.size() > 1) {
-                        List<Questions> randomQuestions = getRandomQuestions(5);
-                        questionList.clear();
-                        questionList.addAll(randomQuestions);
-                    }
-                    if (!questionList.isEmpty()) {
-                        displayQuestion(currentQuestionIndex);
-                    } else {
-                        Toast.makeText(QuizActivity.this, "Không có câu hỏi nào cho chủ đề này.", Toast.LENGTH_SHORT).show();
-                        finish();
-                    }
-                } else {
-                    Toast.makeText(QuizActivity.this, "Không có dữ liệu trong Firebase.", Toast.LENGTH_SHORT).show();
-                    finish();
+    private void loadQuestionsFromJson(String topic) {
+        try {
+            InputStream inputStream = getAssets().open("englishquiz-app.json");
+            BufferedReader reader = new BufferedReader(new InputStreamReader(inputStream));
+            StringBuilder jsonBuilder = new StringBuilder();
+            String line;
+            while ((line = reader.readLine()) != null) {
+                jsonBuilder.append(line);
+            }
+            reader.close();
+
+            JSONObject jsonObject = new JSONObject(jsonBuilder.toString());
+            JSONObject topicQuestions = jsonObject.getJSONObject(topic);
+
+            questionList = new ArrayList<>();
+
+            for (int i = 1; i <= topicQuestions.length(); i++) {
+                String questionKey = "question" + i;
+                if (topicQuestions.has(questionKey)) {
+                    JSONObject questionJson = topicQuestions.getJSONObject(questionKey);
+                    Questions question = new Questions();
+                    question.setQuestion(questionJson.getString("question"));
+                    question.setOption1(questionJson.getString("option1"));
+                    question.setOption2(questionJson.getString("option2"));
+                    question.setOption3(questionJson.getString("option3"));
+                    question.setOption4(questionJson.getString("option4"));
+                    question.setAnswer(questionJson.getString("answer"));
+                    questionList.add(question);
                 }
             }
 
-            @Override
-            public void onCancelled(DatabaseError databaseError) {
-                Toast.makeText(QuizActivity.this, "Lỗi tải dữ liệu: " + databaseError.getMessage(), Toast.LENGTH_SHORT).show();
+            if (!questionList.isEmpty()) {
+                displayQuestion(currentQuestionIndex);
+            } else {
+                Toast.makeText(this, "Không có câu hỏi nào trong chủ đề này.", Toast.LENGTH_SHORT).show();
                 finish();
             }
-        });
+
+        } catch (IOException | JSONException e) {
+            Toast.makeText(this, "Lỗi đọc dữ liệu từ JSON: " + e.getMessage(), Toast.LENGTH_SHORT).show();
+            finish();
+        }
     }
 
     private void displayQuestion(int index) {
         if (countDownTimer != null) {
             countDownTimer.cancel();
         }
+
         if (index < questionList.size()) {
             Questions question = questionList.get(index);
             tvQuestion.setText(question.getQuestion());
@@ -135,6 +144,7 @@ public class QuizActivity extends AppCompatActivity {
             rbOption4.setText(question.getOption4());
             rgOptions.clearCheck();
         }
+
         startCountDownTimer();
     }
 
@@ -148,54 +158,41 @@ public class QuizActivity extends AppCompatActivity {
             @Override
             public void onFinish() {
                 tvTimer.setText("Time's up!");
-                   checkAnswer();
+                checkAnswer();
             }
         };
         countDownTimer.start();
     }
 
-    // Phương thức để lấy 5 câu hỏi ngẫu nhiên
-    private List<Questions> getRandomQuestions(int count) {
-        List<Questions> randomQuestions = new ArrayList<>();
-        List<Questions> shuffledList = new ArrayList<>(questionList);
-        java.util.Collections.shuffle(shuffledList);
-        for (int i = 0; i < count; i++) {
-            randomQuestions.add(shuffledList.get(i));
-        }
-
-        return randomQuestions;
-    }
-
     private void checkAnswer() {
         if (countDownTimer != null) {
-            countDownTimer.cancel(); // Hủy bộ đếm thời gian
+            countDownTimer.cancel();
         }
-       Questions currentQuestion = questionList.get(currentQuestionIndex);
-        String correctAnswer = currentQuestion.getAnswer();
 
+        Questions currentQuestion = questionList.get(currentQuestionIndex);
+        String correctAnswer = currentQuestion.getAnswer();
 
         String selectedAnswer = "";
         int selectedOptionId = rgOptions.getCheckedRadioButtonId();
 
         if (selectedOptionId == rbOption1.getId()) {
-          selectedAnswer = rbOption1.getText().toString();
-       } else if (selectedOptionId == rbOption2.getId()) {
+            selectedAnswer = rbOption1.getText().toString();
+        } else if (selectedOptionId == rbOption2.getId()) {
             selectedAnswer = rbOption2.getText().toString();
-       } else if (selectedOptionId == rbOption3.getId()) {
-           selectedAnswer = rbOption3.getText().toString();
-      } else if (selectedOptionId == rbOption4.getId()) {
+        } else if (selectedOptionId == rbOption3.getId()) {
+            selectedAnswer = rbOption3.getText().toString();
+        } else if (selectedOptionId == rbOption4.getId()) {
             selectedAnswer = rbOption4.getText().toString();
-       }
-        // Lưu câu hỏi, đáp án đúng, và đáp án đã chọn
+        }
+
         questions.add(currentQuestion.getQuestion());
         correctAnswers.add(correctAnswer);
         selectedAnswers.add(selectedAnswer);
 
-        if (currentQuestionIndex < questionList.size()-1) {
+        if (currentQuestionIndex < questionList.size() - 1) {
             currentQuestionIndex++;
             displayQuestion(currentQuestionIndex);
         } else {
-            // Chuyển sang màn hình kết quả
             Intent intent = new Intent(QuizActivity.this, ResultActivity.class);
             intent.putStringArrayListExtra("questions", (ArrayList<String>) questions);
             intent.putStringArrayListExtra("correctAnswers", (ArrayList<String>) correctAnswers);

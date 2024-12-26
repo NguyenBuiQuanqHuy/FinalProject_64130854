@@ -1,0 +1,58 @@
+{
+  "questions": {
+    "Animal": "",
+    "Fruit": "",
+    "Grammar": "",
+    "Vehicle": "",
+    "Vocabulary": {
+      "question1": {
+        "answer": "lasted",
+        "option1": "ended",
+        "option2": "finished",
+        "option3": "lasted",
+        "option4": "stayed",
+        "question": "It was the longest film I’ve ever seen; it ______ four hours."
+      },
+      "question2": {
+        "answer": "Joyful",
+        "option1": "Sad",
+        "option2": "Joyful",
+        "option3": "Angry",
+        "option4": "Sleepy",
+        "question": "What is the synonym of the word \"happy\"?"
+      },
+      "question3": {
+        "answer": "lay",
+        "option1": "place",
+        "option2": "lay",
+        "option3": "lay put",
+        "option4": "put out",
+        "question": "It is time to ______ the table for dinner."
+      },
+      "question4": {
+        "answer": "Clarify",
+        "option1": "Confuse",
+        "option2": "Clarify",
+        "option3": "Complicate",
+        "option4": "Misunderstand",
+        "question": "Which of the following means \"to explain something clearly\"?"
+      },
+      "question5": {
+        "answer": "Quiet",
+        "option1": "Loud",
+        "option2": "Silent",
+        "option3": "Fast",
+        "option4": "Quiet",
+        "question": "Which word is the opposite of \"noisy\"?"
+      },
+      "question6": {
+        "answer": "a lay-by",
+        "option1": "a bypass",
+        "option2": "flyover",
+        "option3": "a lay-by",
+        "option4": "a roundabout",
+        "question": "After driving for five hours, the driver pulled into ______ for a rest."
+      }
+    }
+  }
+}
