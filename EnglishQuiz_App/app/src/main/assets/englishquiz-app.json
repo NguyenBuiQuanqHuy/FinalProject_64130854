@@ -1,9 +1,6 @@
 {
   "questions": {
-    "Animal": "",
-    "Fruit": "",
     "Grammar": "",
-    "Vehicle": "",
     "Vocabulary": {
       "question1": {
         "answer": "lasted",
@@ -53,6 +50,13 @@
         "option4": "a roundabout",
         "question": "After driving for five hours, the driver pulled into ______ for a rest."
       }
-    }
+    },
+    "Pronouns & Adjectives":" ",
+    "Prepositions": " ",
+    "Verbs": " ",
+    "Parts of Speech":" ",
+    "Sentence Structure":" ",
+    "Contextual Vocabulary": " ",
+    "Nouns": " "
   }
 }

@@ -30,7 +30,6 @@ public class TopicAdapter extends RecyclerView.Adapter<TopicAdapter.ItemTopicHol
         LayoutInflater inflater=LayoutInflater.from(context);
         View vItem=inflater.inflate(R.layout.topic_items,parent,false);
         ItemTopicHolder holderCreated =new ItemTopicHolder(vItem);
-
         return holderCreated;
     }
 
@@ -40,7 +39,7 @@ public class TopicAdapter extends RecyclerView.Adapter<TopicAdapter.ItemTopicHol
         String name =TopicView.getTopic();
         String Anh=TopicView.getImageFile();
         holder.tvTopicName.setText(name);
-        //Đặt ảnh
+
         String packedName=holder.itemView.getContext().getPackageName();
         int imageID=holder.itemView.getResources().getIdentifier(Anh,"mipmap",packedName);
         holder.imageViewTopic.setImageResource(imageID);
@@ -48,32 +47,9 @@ public class TopicAdapter extends RecyclerView.Adapter<TopicAdapter.ItemTopicHol
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent;
-                if(name.equals("Vocabulary")){
-                    intent=new Intent(context, QuizActivity.class);
-                    intent.putExtra("topic", TopicView.getTopic());
-                    context.startActivity(intent);
-                }
-                else if(name.equals("Grammar")){
-                    intent=new Intent(context, QuizActivity.class);
-                    intent.putExtra("topic", TopicView.getTopic());
-                    context.startActivity(intent);
-                }
-                else if(name.equals("Animals")){
-                    intent=new Intent(context, QuizActivity.class);
-                    intent.putExtra("topic", TopicView.getTopic());
-                    context.startActivity(intent);
-                }
-                else if(name.equals("Vehicle")){
-                    intent=new Intent(context, QuizActivity.class);
-                    intent.putExtra("topic", TopicView.getTopic());
-                    context.startActivity(intent);
-                }
-                else if(name.equals("Fruit")){
-                    intent=new Intent(context, QuizActivity.class);
-                    intent.putExtra("topic", TopicView.getTopic());
-                    context.startActivity(intent);
-                }
+                Intent intent = new Intent(context, QuizActivity.class);
+                intent.putExtra("topic", TopicView.getTopic());
+                context.startActivity(intent);
             }
         });
     }
