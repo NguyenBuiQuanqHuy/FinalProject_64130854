@@ -44,9 +44,9 @@ public class HomeFragment extends Fragment {
         ArrayList<Topic> ListData=new ArrayList<>();
         ListData.add(new Topic("vocabulary","Vocabulary"));
         ListData.add(new Topic("grammar","Grammar"));
-        ListData.add(new Topic("animal","Animals"));
-        ListData.add(new Topic("vehicle","Vehicle"));
-        ListData.add(new Topic("fruit","Fruit"));
+        ListData.add(new Topic("prepositions","Prepositions"));
+        ListData.add(new Topic("pronouns_adjectives","Pronouns & Adjectives"));
+        ListData.add(new Topic("partofspeech","Part of Speech"));
         return ListData;
     }
 
