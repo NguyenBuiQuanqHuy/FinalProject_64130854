@@ -4,7 +4,6 @@ import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -37,13 +36,8 @@ public class TopicAdapter extends RecyclerView.Adapter<TopicAdapter.ItemTopicHol
     public void onBindViewHolder(@NonNull ItemTopicHolder holder, int position) {
         Topic TopicView=listTopicData.get(position);
         String name =TopicView.getTopic();
-        String Anh=TopicView.getImageFile();
 
         holder.tvTopicName.setText(name);
-
-        String packedName=holder.itemView.getContext().getPackageName();
-        int imageID=holder.itemView.getResources().getIdentifier(Anh,"mipmap",packedName);
-        holder.imageViewTopic.setImageResource(imageID);
 
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -61,12 +55,10 @@ public class TopicAdapter extends RecyclerView.Adapter<TopicAdapter.ItemTopicHol
     }
 
     class ItemTopicHolder extends RecyclerView.ViewHolder{
-        ImageView imageViewTopic;
         TextView tvTopicName;
 
        public ItemTopicHolder(@NonNull View itemView) {
            super(itemView);
-           imageViewTopic=itemView.findViewById(R.id.img_topic);
            tvTopicName=itemView.findViewById(R.id.tv_topic_name);
        }
    }

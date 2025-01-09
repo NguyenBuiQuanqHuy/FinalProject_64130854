@@ -42,11 +42,11 @@ public class HomeFragment extends Fragment {
 
     ArrayList<Topic> getTopicRecycler(){
         ArrayList<Topic> ListData=new ArrayList<>();
-        ListData.add(new Topic("vocabulary","Vocabulary"));
-        ListData.add(new Topic("grammar","Grammar"));
-        ListData.add(new Topic("prepositions","Prepositions"));
-        ListData.add(new Topic("pronouns_adjectives","Pronouns & Adjectives"));
-        ListData.add(new Topic("partofspeech","Part of Speech"));
+        ListData.add(new Topic("Vocabulary"));
+        ListData.add(new Topic("Grammar"));
+        ListData.add(new Topic("Prepositions"));
+        ListData.add(new Topic("Pronouns & Adjectives"));
+        ListData.add(new Topic("Part of Speech"));
         return ListData;
     }
 
