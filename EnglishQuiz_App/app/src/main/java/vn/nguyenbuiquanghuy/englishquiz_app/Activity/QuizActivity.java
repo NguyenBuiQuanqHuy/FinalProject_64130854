@@ -1,5 +1,6 @@
 package vn.nguyenbuiquanghuy.englishquiz_app.Activity;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.view.View;
@@ -38,7 +39,8 @@ public class QuizActivity extends AppCompatActivity {
     List<String> selectedAnswers = new ArrayList<>();
     DatabaseReference questionRef;
     CountDownTimer countDownTimer;
-    static final int TIMER_DURATION = 10000; // 30 giây
+    int TIMER_DURATION;
+    int NUMBER_OF_QUESTIONS;
 
 
     @Override
@@ -51,6 +53,8 @@ public class QuizActivity extends AppCompatActivity {
             finish();
             return;
         }
+
+        loadSettings();
         tvTopic=findViewById(R.id.tv_TopicQuiz);
         tvQuestion = findViewById(R.id.tv_results);
         tvTimer = findViewById(R.id.tv_timer);
@@ -125,7 +129,7 @@ public class QuizActivity extends AppCompatActivity {
             }
 
             if (!questionList.isEmpty()) {
-                List<Questions> randomQuestions = getRandomQuestions(10);
+                List<Questions> randomQuestions = getRandomQuestions(NUMBER_OF_QUESTIONS);
                 questionList = randomQuestions;
                 displayQuestion(currentQuestionIndex);
             } else {
@@ -153,6 +157,15 @@ public class QuizActivity extends AppCompatActivity {
             rgOptions.clearCheck();
         }
         startCountDownTimer();
+    }
+
+    private void loadSettings() {
+        SharedPreferences preferences = getSharedPreferences("QuizSettings", MODE_PRIVATE);
+        int timeLimit = preferences.getInt("timeLimit", 10);
+        int numberOfQuestions = preferences.getInt("numberOfQuestions", 10);
+
+        TIMER_DURATION = timeLimit * 1000;
+        NUMBER_OF_QUESTIONS = numberOfQuestions;
     }
 
     private void startCountDownTimer() {

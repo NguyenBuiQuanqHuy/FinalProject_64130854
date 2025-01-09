@@ -1,5 +1,8 @@
 package vn.nguyenbuiquanghuy.englishquiz_app.Fragment;
 
+import static android.content.Context.MODE_PRIVATE;
+
+import android.content.SharedPreferences;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -88,6 +91,15 @@ public class SettingFragment extends Fragment {
     private void saveSettings() {
         String time = edTime.getText().toString();
         String questions = edQues.getText().toString();
+
+        // Kiểm tra và lưu vào SharedPreferences
+        SharedPreferences preferences = getContext().getSharedPreferences("QuizSettings", MODE_PRIVATE);
+        SharedPreferences.Editor editor = preferences.edit();
+        editor.putInt("timeLimit", Integer.parseInt(time));  // Thời gian trong giây
+        editor.putInt("numberOfQuestions", Integer.parseInt(questions));  // Số câu hỏi
+        editor.apply();  // Lưu thay đổi
+
         Toast.makeText(getActivity(), "Cài đặt đã được lưu\nThời gian: " + time + " giây\nSố câu hỏi: " + questions, Toast.LENGTH_SHORT).show();
     }
+
 }
