@@ -1,36 +1,46 @@
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:orientation="vertical"
-    android:padding="8dp"
+<androidx.cardview.widget.CardView
     xmlns:android="http://schemas.android.com/apk/res/android"
-    android:background="@drawable/item_result_background">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    app:cardCornerRadius="12dp"
+    app:cardElevation="6dp"
+    app:cardBackgroundColor="@color/white">
 
-    <TextView
-        android:id="@+id/tv_question"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:paddingBottom="4dp"
-        android:text="Câu hỏi"
-        android:textColor="@color/black"
-        android:textSize="18sp"
-        android:textStyle="bold" />
+<LinearLayout
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:orientation="vertical"
+android:padding="12dp">
 
-    <TextView
-        android:id="@+id/tv_correct_answer"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Đáp án đúng"
-        android:textColor="@color/green"
-        android:textSize="16sp"
-        android:textStyle="bold" />
+<TextView
+    android:id="@+id/tv_question"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="8dp"
+    android:text="Câu hỏi"
+    android:textColor="@color/black"
+    android:textSize="18sp"
+    android:textStyle="bold" />
 
-    <TextView
-        android:id="@+id/tv_selected_answer"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Đáp án của bạn"
-        android:textColor="@color/black"
-        android:textSize="16dp"
-        android:textStyle="bold|italic" />
+<TextView
+    android:id="@+id/tv_correct_answer"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="Đáp án đúng"
+    android:textColor="@color/green"
+    android:textSize="16sp"
+    android:textStyle="bold" />
+
+<TextView
+    android:id="@+id/tv_selected_answer"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="Đáp án của bạn"
+    android:textColor="@color/black"
+    android:textSize="16sp"
+    android:textStyle="bold|italic" />
+
 </LinearLayout>
+    </androidx.cardview.widget.CardView>

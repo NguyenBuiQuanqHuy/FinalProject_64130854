@@ -1,15 +1,21 @@
 package vn.nguyenbuiquanghuy.englishquiz_app.Model;
 
 public class Topic {
-
+    String imageFile;
     String Topic;
 
-    public Topic( String topic) {
-
+    public Topic(String imageFile, String topic) {
+        this.imageFile = imageFile;
         Topic = topic;
     }
 
+    public String getImageFile() {
+        return imageFile;
+    }
 
+    public void setImageFile(String imageFile) {
+        this.imageFile = imageFile;
+    }
 
     public String getTopic() {
         return Topic;
