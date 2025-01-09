@@ -1,45 +1,38 @@
-<androidx.cardview.widget.CardView
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_marginBottom="10dp"
+    app:cardBackgroundColor="#FFFCBD"
     app:cardCornerRadius="12dp"
-    app:cardElevation="6dp"
-    app:cardBackgroundColor="#FFF8E1">
+    app:cardElevation="6dp">
 
-<LinearLayout
-android:layout_width="match_parent"
-android:layout_height="wrap_content"
-android:gravity="center_vertical"
-android:orientation="horizontal"
-android:padding="12dp">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="12dp">
 
-<androidx.cardview.widget.CardView
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    app:cardCornerRadius="10dp">
+        <ImageView
+            android:id="@+id/img_topic"
+            android:layout_width="130dp"
+            android:layout_height="113dp"
+            android:background="@android:color/transparent"
+            android:scaleType="fitXY"
+            app:srcCompat="@drawable/bird" />
 
-    <ImageView
-        android:id="@+id/img_topic"
-        android:layout_width="140dp"
-        android:layout_height="113dp"
-        android:scaleType="fitXY"
-        app:srcCompat="@drawable/img_1" />
+        <TextView
+            android:id="@+id/tv_topic_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="FIRST GRADE"
+            android:textAlignment="center"
+            android:textColor="#000000"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
 </androidx.cardview.widget.CardView>
-
-<TextView
-    android:id="@+id/tv_topic_name"
-    android:layout_width="0dp"
-    android:layout_height="wrap_content"
-    android:layout_marginStart="16dp"
-    android:layout_weight="1"
-    android:gravity="center"
-    android:text="FIRST GRADE"
-    android:textAlignment="center"
-    android:textColor="#F57F17"
-    android:textSize="30sp"
-    android:textStyle="bold" />
-
-</LinearLayout>
-    </androidx.cardview.widget.CardView>

@@ -67,6 +67,7 @@ public class TopicAdapter extends RecyclerView.Adapter<TopicAdapter.ItemTopicHol
        public ItemTopicHolder(@NonNull View itemView) {
            super(itemView);
            imageViewTopic=itemView.findViewById(R.id.img_topic);
+           imageViewTopic.setLayerType(View.LAYER_TYPE_SOFTWARE, null);
            tvTopicName=itemView.findViewById(R.id.tv_topic_name);
        }
    }
