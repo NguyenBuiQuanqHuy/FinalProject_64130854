@@ -17,7 +17,7 @@ import android.view.MenuItem;
 import com.google.android.material.navigation.NavigationView;
 
 import vn.nguyenbuiquanghuy.englishquiz_app.Fragment.HomeFragment;
-import vn.nguyenbuiquanghuy.englishquiz_app.Fragment.NewFragment;
+import vn.nguyenbuiquanghuy.englishquiz_app.Fragment.SettingFragment;
 import vn.nguyenbuiquanghuy.englishquiz_app.Fragment.ProfileFragment;
 import vn.nguyenbuiquanghuy.englishquiz_app.R;
 
@@ -49,8 +49,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
         if (item.getItemId() == R.id.nav_home) {
             getSupportFragmentManager().beginTransaction().replace(R.id.fragment_layout, new HomeFragment()).commit();
-        } else if (item.getItemId() == R.id.nav_follow) {
-            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_layout, new NewFragment()).commit();
+        } else if (item.getItemId() == R.id.nav_setting) {
+            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_layout, new SettingFragment()).commit();
         } else if (item.getItemId() == R.id.nav_profile) {
 
             getSupportFragmentManager().beginTransaction().replace(R.id.fragment_layout, new ProfileFragment()).commit();
