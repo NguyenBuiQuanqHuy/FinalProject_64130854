@@ -1,6 +1,6 @@
 {
   "questions": {
-    "Vocabulary":{
+    "1st Grade": {
       "question1": {
         "answer": "lasted",
         "option1": "ended",
@@ -48,64 +48,941 @@
         "option3": "a lay-by",
         "option4": "a roundabout",
         "question": "After driving for five hours, the driver pulled into ______ for a rest."
+      },
+      "question7": {
+        "answer": "eat",
+        "option1": "eat",
+        "option2": "sleep",
+        "option3": "run",
+        "option4": "jump",
+        "question": "What do you do when you are hungry?"
+      },
+      "question8": {
+        "answer": "small",
+        "option1": "big",
+        "option2": "small",
+        "option3": "fast",
+        "option4": "slow",
+        "question": "Which word describes something little in size?"
+      },
+      "question9": {
+        "answer": "speak",
+        "option1": "speak",
+        "option2": "read",
+        "option3": "write",
+        "option4": "draw",
+        "question": "What do you do when you talk to someone?"
+      },
+      "question10": {
+        "answer": "happy",
+        "option1": "sad",
+        "option2": "happy",
+        "option3": "angry",
+        "option4": "tired",
+        "question": "How do you feel when you get a gift?"
       }
     },
-    "Grammar": {
+    "2nd Grade": {
       "question1": {
-        "answer": "lasted",
-        "option1": "ended",
-        "option2": "finished",
-        "option3": "lasted",
-        "option4": "stayed",
-        "question": "It was the longest film I’ve ever seen; it ______ four hours."
+        "answer": "ran",
+        "option1": "walked",
+        "option2": "ran",
+        "option3": "jumped",
+        "option4": "skipped",
+        "question": "She ______ to catch the bus."
       },
       "question2": {
-        "answer": "Joyful",
-        "option1": "Sad",
-        "option2": "Joyful",
-        "option3": "Angry",
-        "option4": "Sleepy",
-        "question": "What is the synonym of the word \"happy\"?"
+        "answer": "Lion",
+        "option1": "Elephant",
+        "option2": "Lion",
+        "option3": "Dog",
+        "option4": "Cat",
+        "question": "Which animal is known as the king of the jungle?"
       },
       "question3": {
-        "answer": "lay",
-        "option1": "place",
-        "option2": "lay",
-        "option3": "lay put",
-        "option4": "put out",
-        "question": "It is time to ______ the table for dinner."
+        "answer": "happy",
+        "option1": "sad",
+        "option2": "happy",
+        "option3": "angry",
+        "option4": "tired",
+        "question": "How do you feel when you receive a gift?"
       },
       "question4": {
-        "answer": "Clarify",
-        "option1": "Confuse",
-        "option2": "Clarify",
-        "option3": "Complicate",
-        "option4": "Misunderstand",
-        "question": "Which of the following means \"to explain something clearly\"?"
+        "answer": "Boat",
+        "option1": "Car",
+        "option2": "Bike",
+        "option3": "Boat",
+        "option4": "Train",
+        "question": "What do you use to travel on water?"
       },
       "question5": {
-        "answer": "Quiet",
-        "option1": "Loud",
-        "option2": "Silent",
-        "option3": "Fast",
-        "option4": "Quiet",
-        "question": "Which word is the opposite of \"noisy\"?"
+        "answer": "Big",
+        "option1": "Big",
+        "option2": "Small",
+        "option3": "Tall",
+        "option4": "Short",
+        "question": "Which word describes something that is large in size?"
       },
       "question6": {
-        "answer": "a lay-by",
-        "option1": "a bypass",
-        "option2": "flyover",
-        "option3": "a lay-by",
-        "option4": "a roundabout",
-        "question": "After driving for five hours, the driver pulled into ______ for a rest."
+        "answer": "Cake",
+        "option1": "Bread",
+        "option2": "Cake",
+        "option3": "Rice",
+        "option4": "Soup",
+        "question": "What do we usually eat on our birthday?"
+      },
+      "question7": {
+        "answer": "school",
+        "option1": "home",
+        "option2": "park",
+        "option3": "school",
+        "option4": "supermarket",
+        "question": "Where do you go to learn?"
+      },
+      "question8": {
+        "answer": "cat",
+        "option1": "dog",
+        "option2": "cat",
+        "option3": "bird",
+        "option4": "fish",
+        "question": "Which animal says meow?"
+      },
+      "question9": {
+        "answer": "sunny",
+        "option1": "cloudy",
+        "option2": "rainy",
+        "option3": "sunny",
+        "option4": "windy",
+        "question": "What kind of weather is bright and warm?"
+      },
+      "question10": {
+        "answer": "soft",
+        "option1": "hard",
+        "option2": "soft",
+        "option3": "smooth",
+        "option4": "rough",
+        "question": "How do you describe a fluffy pillow?"
       }
     },
-    "Pronouns & Adjectives":" ",
-    "Prepositions": " ",
-    "Verbs": " ",
-    "Parts of Speech":" ",
-    "Sentence Structure":" ",
-    "Nouns": " "
-  },
-  "theory": " "
+    "3rd Grade": {
+      "question1": {
+        "answer": "broke",
+        "option1": "fixed",
+        "option2": "broke",
+        "option3": "repaired",
+        "option4": "built",
+        "question": "The vase ______ when it fell off the table."
+      },
+      "question2": {
+        "answer": "delicious",
+        "option1": "awful",
+        "option2": "delicious",
+        "option3": "bitter",
+        "option4": "sour",
+        "question": "How would you describe food that tastes very good?"
+      },
+      "question3": {
+        "answer": "tired",
+        "option1": "energetic",
+        "option2": "tired",
+        "option3": "excited",
+        "option4": "happy",
+        "question": "How do you feel after a long day at school?"
+      },
+      "question4": {
+        "answer": "above",
+        "option1": "under",
+        "option2": "above",
+        "option3": "beside",
+        "option4": "around",
+        "question": "The bird is flying ______ the tree."
+      },
+      "question5": {
+        "answer": "rainy",
+        "option1": "snowy",
+        "option2": "sunny",
+        "option3": "rainy",
+        "option4": "windy",
+        "question": "Which weather condition involves water falling from the sky?"
+      },
+      "question6": {
+        "answer": "early",
+        "option1": "late",
+        "option2": "early",
+        "option3": "on time",
+        "option4": "never",
+        "question": "What do we call arriving before the expected time?"
+      },
+      "question7": {
+        "answer": "loud",
+        "option1": "quiet",
+        "option2": "loud",
+        "option3": "soft",
+        "option4": "gentle",
+        "question": "Which word describes a noisy sound?"
+      },
+      "question8": {
+        "answer": "angry",
+        "option1": "happy",
+        "option2": "sad",
+        "option3": "angry",
+        "option4": "surprised",
+        "question": "How do you feel when someone is mean to you?"
+      },
+      "question9": {
+        "answer": "wet",
+        "option1": "dry",
+        "option2": "wet",
+        "option3": "clean",
+        "option4": "messy",
+        "question": "What do you feel after jumping in a puddle?"
+      },
+      "question10": {
+        "answer": "school",
+        "option1": "playground",
+        "option2": "store",
+        "option3": "school",
+        "option4": "home",
+        "question": "Where do you go to learn new things?"
+      }
+    },
+    "4th Grade": {
+      "question1": {
+        "answer": "arrived",
+        "option1": "arrived",
+        "option2": "left",
+        "option3": "forgot",
+        "option4": "departed",
+        "question": "He ______ just in time for the meeting."
+      },
+      "question2": {
+        "answer": "perform",
+        "option1": "watch",
+        "option2": "perform",
+        "option3": "play",
+        "option4": "write",
+        "question": "They ______ on the stage during the school play."
+      },
+      "question3": {
+        "answer": "clearly",
+        "option1": "clearly",
+        "option2": "quietly",
+        "option3": "noisily",
+        "option4": "loudly",
+        "question": "The teacher explained the problem ______ so everyone understood."
+      },
+      "question4": {
+        "answer": "happiness",
+        "option1": "joy",
+        "option2": "happiness",
+        "option3": "sorrow",
+        "option4": "fear",
+        "question": "The state of being happy is called ______."
+      },
+      "question5": {
+        "answer": "autumn",
+        "option1": "summer",
+        "option2": "spring",
+        "option3": "autumn",
+        "option4": "winter",
+        "question": "Which season comes after summer?"
+      },
+      "question6": {
+        "answer": "quickly",
+        "option1": "quickly",
+        "option2": "slowly",
+        "option3": "gracefully",
+        "option4": "carefully",
+        "question": "She finished the homework ______."
+      },
+      "question7": {
+        "answer": "respect",
+        "option1": "respect",
+        "option2": "disrespect",
+        "option3": "rudeness",
+        "option4": "politeness",
+        "question": "It is important to show ______ to everyone."
+      },
+      "question8": {
+        "answer": "neighborhood",
+        "option1": "city",
+        "option2": "town",
+        "option3": "neighborhood",
+        "option4": "country",
+        "question": "I live in a quiet ______ near the park."
+      },
+      "question9": {
+        "answer": "help",
+        "option1": "help",
+        "option2": "ignore",
+        "option3": "bother",
+        "option4": "hurt",
+        "question": "If you see someone in trouble, you should ______."
+      },
+      "question10": {
+        "answer": "think",
+        "option1": "run",
+        "option2": "think",
+        "option3": "shout",
+        "option4": "laugh",
+        "question": "Before you answer, take a moment to ______."
+      }
+    },
+    "5th Grade": {
+      "question1": {
+        "answer": "necessary",
+        "option1": "possible",
+        "option2": "necessary",
+        "option3": "optional",
+        "option4": "unimportant",
+        "question": "It is ______ to study every day if you want to improve."
+      },
+      "question2": {
+        "answer": "solution",
+        "option1": "problem",
+        "option2": "question",
+        "option3": "answer",
+        "option4": "solution",
+        "question": "The ______ to the math problem was simple."
+      },
+      "question3": {
+        "answer": "borrow",
+        "option1": "buy",
+        "option2": "borrow",
+        "option3": "lend",
+        "option4": "keep",
+        "question": "Can I ______ your pen for a moment?"
+      },
+      "question4": {
+        "answer": "difficult",
+        "option1": "easy",
+        "option2": "difficult",
+        "option3": "boring",
+        "option4": "fun",
+        "question": "The exam was ______ for everyone."
+      },
+      "question5": {
+        "answer": "reach",
+        "option1": "reach",
+        "option2": "touch",
+        "option3": "grab",
+        "option4": "pull",
+        "question": "She couldn’t ______ the top shelf."
+      },
+      "question6": {
+        "answer": "enough",
+        "option1": "too much",
+        "option2": "a little",
+        "option3": "enough",
+        "option4": "more",
+        "question": "We don’t have ______ food for the party."
+      },
+      "question7": {
+        "answer": "choose",
+        "option1": "choose",
+        "option2": "decide",
+        "option3": "reject",
+        "option4": "ignore",
+        "question": "Can you ______ what color you want?"
+      },
+      "question8": {
+        "answer": "appear",
+        "option1": "disappear",
+        "option2": "stay",
+        "option3": "arrive",
+        "option4": "appear",
+        "question": "He will ______ in the play tomorrow night."
+      },
+      "question9": {
+        "answer": "annoyed",
+        "option1": "happy",
+        "option2": "annoyed",
+        "option3": "calm",
+        "option4": "excited",
+        "question": "She was ______ because her friend was late."
+      },
+      "question10": {
+        "answer": "reliable",
+        "option1": "kind",
+        "option2": "reliable",
+        "option3": "funny",
+        "option4": "hardworking",
+        "question": "You can count on John; he is very ______."
+      }
+    },
+    "6th Grade": {
+      "question1": {
+        "answer": "believe",
+        "option1": "think",
+        "option2": "believe",
+        "option3": "imagine",
+        "option4": "doubt",
+        "question": "I ______ in the importance of hard work."
+      },
+      "question2": {
+        "answer": "situation",
+        "option1": "place",
+        "option2": "event",
+        "option3": "situation",
+        "option4": "problem",
+        "question": "He found himself in a difficult ______."
+      },
+      "question3": {
+        "answer": "problems",
+        "option1": "answers",
+        "option2": "solutions",
+        "option3": "questions",
+        "option4": "problems",
+        "question": "We need to find the right ______ to solve this issue."
+      },
+      "question4": {
+        "answer": "opinion",
+        "option1": "idea",
+        "option2": "opinion",
+        "option3": "fact",
+        "option4": "truth",
+        "question": "Everyone has their own ______ about the subject."
+      },
+      "question5": {
+        "answer": "speak",
+        "option1": "listen",
+        "option2": "speak",
+        "option3": "read",
+        "option4": "write",
+        "question": "It’s important to ______ clearly in front of an audience."
+      },
+      "question6": {
+        "answer": "stranger",
+        "option1": "friend",
+        "option2": "family",
+        "option3": "stranger",
+        "option4": "neighbor",
+        "question": "You should never talk to a ______ online."
+      },
+      "question7": {
+        "answer": "chance",
+        "option1": "luck",
+        "option2": "possibility",
+        "option3": "chance",
+        "option4": "effort",
+        "question": "You have a good ______ of winning the contest."
+      },
+      "question8": {
+        "answer": "accomplish",
+        "option1": "fail",
+        "option2": "accomplish",
+        "option3": "quit",
+        "option4": "struggle",
+        "question": "She worked hard to ______ her goals."
+      },
+      "question9": {
+        "answer": "finish",
+        "option1": "start",
+        "option2": "finish",
+        "option3": "pause",
+        "option4": "continue",
+        "question": "I need to ______ my homework before dinner."
+      },
+      "question10": {
+        "answer": "hurry",
+        "option1": "relax",
+        "option2": "wait",
+        "option3": "stop",
+        "option4": "hurry",
+        "question": "You need to ______ up or you’ll be late."
+      }
+    },
+    "7th Grade": {
+      "question1": {
+        "answer": "concept",
+        "option1": "idea",
+        "option2": "concept",
+        "option3": "truth",
+        "option4": "opinion",
+        "question": "The ______ of the book was hard to understand."
+      },
+      "question2": {
+        "answer": "task",
+        "option1": "game",
+        "option2": "task",
+        "option3": "challenge",
+        "option4": "activity",
+        "question": "His ______ was to clean the kitchen."
+      },
+      "question3": {
+        "answer": "extremely",
+        "option1": "very",
+        "option2": "extremely",
+        "option3": "somewhat",
+        "option4": "slightly",
+        "question": "The exam was ______ difficult."
+      },
+      "question4": {
+        "answer": "solution",
+        "option1": "answer",
+        "option2": "solution",
+        "option3": "response",
+        "option4": "fix",
+        "question": "The ______ to the problem was simple once we thought about it."
+      },
+      "question5": {
+        "answer": "progress",
+        "option1": "success",
+        "option2": "failure",
+        "option3": "progress",
+        "option4": "challenge",
+        "question": "She made good ______ in her studies this year."
+      },
+      "question6": {
+        "answer": "important",
+        "option1": "trivial",
+        "option2": "important",
+        "option3": "useless",
+        "option4": "irrelevant",
+        "question": "This task is very ______ to our project."
+      },
+      "question7": {
+        "answer": "unfortunate",
+        "option1": "lucky",
+        "option2": "fortunate",
+        "option3": "unfortunate",
+        "option4": "neutral",
+        "question": "It was ______ that the event was canceled."
+      },
+      "question8": {
+        "answer": "positive",
+        "option1": "neutral",
+        "option2": "positive",
+        "option3": "negative",
+        "option4": "helpful",
+        "question": "I try to maintain a ______ attitude in tough situations."
+      },
+      "question9": {
+        "answer": "complicated",
+        "option1": "simple",
+        "option2": "complicated",
+        "option3": "easy",
+        "option4": "clear",
+        "question": "The math problem was very ______."
+      },
+      "question10": {
+        "answer": "suggestion",
+        "option1": "question",
+        "option2": "answer",
+        "option3": "suggestion",
+        "option4": "idea",
+        "question": "He gave me a helpful ______ on how to improve."
+      }
+    },
+    "8th Grade": {
+      "question1": {
+        "answer": "attract",
+        "option1": "repel",
+        "option2": "attract",
+        "option3": "ignore",
+        "option4": "avoid",
+        "question": "Bright colors can ______ more customers to the store."
+      },
+      "question2": {
+        "answer": "compromise",
+        "option1": "argue",
+        "option2": "compromise",
+        "option3": "challenge",
+        "option4": "reject",
+        "question": "Sometimes you have to ______ in order to find a solution."
+      },
+      "question3": {
+        "answer": "enjoy",
+        "option1": "despise",
+        "option2": "enjoy",
+        "option3": "avoid",
+        "option4": "hate",
+        "question": "I really ______ playing soccer with my friends."
+      },
+      "question4": {
+        "answer": "experience",
+        "option1": "theory",
+        "option2": "experiment",
+        "option3": "practice",
+        "option4": "experience",
+        "question": "I gained a lot of ______ while working in the industry."
+      },
+      "question5": {
+        "answer": "calm",
+        "option1": "angry",
+        "option2": "calm",
+        "option3": "excited",
+        "option4": "nervous",
+        "question": "She remained ______ during the stressful situation."
+      },
+      "question6": {
+        "answer": "hilarious",
+        "option1": "boring",
+        "option2": "hilarious",
+        "option3": "sad",
+        "option4": "serious",
+        "question": "The movie was so ______ that we couldn’t stop laughing."
+      },
+      "question7": {
+        "answer": "inspire",
+        "option1": "discourage",
+        "option2": "inspire",
+        "option3": "annoy",
+        "option4": "bore",
+        "question": "Good teachers can ______ students to reach their full potential."
+      },
+      "question8": {
+        "answer": "increase",
+        "option1": "decrease",
+        "option2": "increase",
+        "option3": "maintain",
+        "option4": "reduce",
+        "question": "The company plans to ______ production to meet demand."
+      },
+      "question9": {
+        "answer": "innovative",
+        "option1": "traditional",
+        "option2": "innovative",
+        "option3": "boring",
+        "option4": "uncreative",
+        "question": "Her ______ approach to solving problems impressed everyone."
+      },
+      "question10": {
+        "answer": "benefit",
+        "option1": "harm",
+        "option2": "benefit",
+        "option3": "failure",
+        "option4": "danger",
+        "question": "Exercise has many health ______."
+      }
+    },
+    "9th Grade": {
+      "question1": {
+        "answer": "achieve",
+        "option1": "fail",
+        "option2": "achieve",
+        "option3": "lose",
+        "option4": "ignore",
+        "question": "You must work hard to ______ your goals."
+      },
+      "question2": {
+        "answer": "debate",
+        "option1": "agree",
+        "option2": "debate",
+        "option3": "disagree",
+        "option4": "ignore",
+        "question": "The two politicians will ______ on the national issues."
+      },
+      "question3": {
+        "answer": "increase",
+        "option1": "increase",
+        "option2": "decrease",
+        "option3": "stay",
+        "option4": "reduce",
+        "question": "They plan to ______ the budget for next year."
+      },
+      "question4": {
+        "answer": "reliable",
+        "option1": "untrustworthy",
+        "option2": "reliable",
+        "option3": "lazy",
+        "option4": "inconsistent",
+        "question": "We need a ______ supplier for our business."
+      },
+      "question5": {
+        "answer": "conclude",
+        "option1": "begin",
+        "option2": "conclude",
+        "option3": "continue",
+        "option4": "stop",
+        "question": "The teacher will ______ the lesson with a summary."
+      },
+      "question6": {
+        "answer": "difficult",
+        "option1": "easy",
+        "option2": "difficult",
+        "option3": "fun",
+        "option4": "boring",
+        "question": "The test was so ______ that many students failed."
+      },
+      "question7": {
+        "answer": "calculate",
+        "option1": "guess",
+        "option2": "estimate",
+        "option3": "calculate",
+        "option4": "ignore",
+        "question": "We need to ______ the total cost of the project."
+      },
+      "question8": {
+        "answer": "ambitious",
+        "option1": "lazy",
+        "option2": "content",
+        "option3": "ambitious",
+        "option4": "shy",
+        "question": "He is an ______ student who aims for excellence."
+      },
+      "question9": {
+        "answer": "successful",
+        "option1": "unsuccessful",
+        "option2": "successful",
+        "option3": "average",
+        "option4": "mediocre",
+        "question": "Her business became very ______ after the launch."
+      },
+      "question10": {
+        "answer": "compromise",
+        "option1": "argue",
+        "option2": "compromise",
+        "option3": "reject",
+        "option4": "ignore",
+        "question": "They had to ______ on a solution to the problem."
+      }
+    },
+    "10th Grade": {
+      "question1": {
+        "answer": "perspective",
+        "option1": "belief",
+        "option2": "perspective",
+        "option3": "habit",
+        "option4": "opinion",
+        "question": "Everyone has a different ______ on the issue."
+      },
+      "question2": {
+        "answer": "respond",
+        "option1": "react",
+        "option2": "respond",
+        "option3": "ignore",
+        "option4": "reject",
+        "question": "She failed to ______ to the email in time."
+      },
+      "question3": {
+        "answer": "analyze",
+        "option1": "analyze",
+        "option2": "simplify",
+        "option3": "guess",
+        "option4": "estimate",
+        "question": "The scientist will ______ the data to draw conclusions."
+      },
+      "question4": {
+        "answer": "relevant",
+        "option1": "irrelevant",
+        "option2": "relevant",
+        "option3": "useless",
+        "option4": "important",
+        "question": "The evidence was ______ to the case."
+      },
+      "question5": {
+        "answer": "critique",
+        "option1": "approve",
+        "option2": "ignore",
+        "option3": "critique",
+        "option4": "accept",
+        "question": "We need to ______ the project before making a decision."
+      },
+      "question6": {
+        "answer": "predict",
+        "option1": "guess",
+        "option2": "predict",
+        "option3": "calculate",
+        "option4": "assume",
+        "question": "We can ______ the outcome based on the data."
+      },
+      "question7": {
+        "answer": "collaborate",
+        "option1": "compete",
+        "option2": "collaborate",
+        "option3": "ignore",
+        "option4": "separate",
+        "question": "The two companies decided to ______ on the new product."
+      },
+      "question8": {
+        "answer": "improve",
+        "option1": "reduce",
+        "option2": "improve",
+        "option3": "ignore",
+        "option4": "maintain",
+        "question": "We need to ______ our marketing strategy."
+      },
+      "question9": {
+        "answer": "progress",
+        "option1": "fail",
+        "option2": "progress",
+        "option3": "pause",
+        "option4": "struggle",
+        "question": "The student has made great ______ in learning English."
+      },
+      "question10": {
+        "answer": "persuade",
+        "option1": "convince",
+        "option2": "persuade",
+        "option3": "force",
+        "option4": "ignore",
+        "question": "He tried to ______ her to go on the trip."
+      }
+    },
+    "11th Grade": {
+      "question1": {
+        "answer": "evaluate",
+        "option1": "assess",
+        "option2": "evaluate",
+        "option3": "judge",
+        "option4": "guess",
+        "question": "You need to ______ the risks before making a decision."
+      },
+      "question2": {
+        "answer": "consequence",
+        "option1": "reward",
+        "option2": "consequence",
+        "option3": "opportunity",
+        "option4": "result",
+        "question": "Every action has a ______."
+      },
+      "question3": {
+        "answer": "substantial",
+        "option1": "minor",
+        "option2": "substantial",
+        "option3": "negligible",
+        "option4": "insignificant",
+        "question": "There was a ______ increase in sales after the campaign."
+      },
+      "question4": {
+        "answer": "eliminate",
+        "option1": "reduce",
+        "option2": "eliminate",
+        "option3": "maintain",
+        "option4": "increase",
+        "question": "We need to ______ the unnecessary costs in the project."
+      },
+      "question5": {
+        "answer": "persuade",
+        "option1": "coerce",
+        "option2": "persuade",
+        "option3": "force",
+        "option4": "distract",
+        "question": "He tried to ______ the committee to support his proposal."
+      },
+      "question6": {
+        "answer": "clarify",
+        "option1": "obscure",
+        "option2": "clarify",
+        "option3": "complicate",
+        "option4": "confuse",
+        "question": "Please ______ the instructions for the new procedure."
+      },
+      "question7": {
+        "answer": "reliable",
+        "option1": "trustworthy",
+        "option2": "reliable",
+        "option3": "dishonest",
+        "option4": "unreliable",
+        "question": "She is a ______ employee who never misses a deadline."
+      },
+      "question8": {
+        "answer": "analyze",
+        "option1": "review",
+        "option2": "analyze",
+        "option3": "ignore",
+        "option4": "simplify",
+        "question": "We need to ______ the data to understand the trends."
+      },
+      "question9": {
+        "answer": "anticipate",
+        "option1": "delay",
+        "option2": "anticipate",
+        "option3": "ignore",
+        "option4": "overlook",
+        "question": "We need to ______ the possible challenges before the project starts."
+      },
+      "question10": {
+        "answer": "strategy",
+        "option1": "method",
+        "option2": "plan",
+        "option3": "strategy",
+        "option4": "tactic",
+        "question": "We need a strong ______ to succeed in the market."
+      }
+    },
+    "12th Grade": {
+      "question1": {
+        "answer": "conceptualize",
+        "option1": "simplify",
+        "option2": "conceptualize",
+        "option3": "ignore",
+        "option4": "overlook",
+        "question": "The architect had to ______ the design before starting the project."
+      },
+      "question2": {
+        "answer": "synthesize",
+        "option1": "combine",
+        "option2": "synthesize",
+        "option3": "analyze",
+        "option4": "fragment",
+        "question": "You need to ______ the information from various sources."
+      },
+      "question3": {
+        "answer": "innovative",
+        "option1": "creative",
+        "option2": "innovative",
+        "option3": "traditional",
+        "option4": "stagnant",
+        "question": "The company launched an ______ product that changed the market."
+      },
+      "question4": {
+        "answer": "empower",
+        "option1": "weaken",
+        "option2": "empower",
+        "option3": "control",
+        "option4": "undermine",
+        "question": "The training aims to ______ employees with new skills."
+      },
+      "question5": {
+        "answer": "profound",
+        "option1": "shallow",
+        "option2": "profound",
+        "option3": "trivial",
+        "option4": "light",
+        "question": "The speech had a ______ impact on the audience."
+      },
+      "question6": {
+        "answer": "reflect",
+        "option1": "distract",
+        "option2": "reflect",
+        "option3": "ignore",
+        "option4": "forget",
+        "question": "You need to ______ on the lessons learned from the project."
+      },
+      "question7": {
+        "answer": "implement",
+        "option1": "ignore",
+        "option2": "implement",
+        "option3": "assess",
+        "option4": "analyze",
+        "question": "The company plans to ______ the new technology by next year."
+      },
+      "question8": {
+        "answer": "transform",
+        "option1": "retain",
+        "option2": "transform",
+        "option3": "maintain",
+        "option4": "regress",
+        "question": "The new system will ______ the way we work."
+      },
+      "question9": {
+        "answer": "visionary",
+        "option1": "practical",
+        "option2": "visionary",
+        "option3": "limited",
+        "option4": "narrow-minded",
+        "question": "He is a ______ leader who thinks beyond the current trends."
+      },
+      "question10": {
+        "answer": "collaboration",
+        "option1": "competition",
+        "option2": "collaboration",
+        "option3": "conflict",
+        "option4": "resistance",
+        "question": "The success of the project was due to strong ______ between the team members."
+      }
+    }
+  }
 }

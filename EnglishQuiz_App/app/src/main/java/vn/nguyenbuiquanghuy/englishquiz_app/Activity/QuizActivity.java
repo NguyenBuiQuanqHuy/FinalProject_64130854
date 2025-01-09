@@ -125,7 +125,7 @@ public class QuizActivity extends AppCompatActivity {
             }
 
             if (!questionList.isEmpty()) {
-                List<Questions> randomQuestions = getRandomQuestions(5);
+                List<Questions> randomQuestions = getRandomQuestions(10);
                 questionList = randomQuestions;
                 displayQuestion(currentQuestionIndex);
             } else {
