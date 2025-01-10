@@ -1,4 +1,4 @@
-package vn.nguyenbuiquanghuy.englishquiz_app;
+package vn.nguyenbuiquanghuy.englishquiz_app.Activity;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -7,9 +7,9 @@ import android.os.Handler;
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
 
-import vn.nguyenbuiquanghuy.englishquiz_app.Activity.MainActivity;
+import vn.nguyenbuiquanghuy.englishquiz_app.R;
 
-public class SplashScreen extends AppCompatActivity {
+public class SplashActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,7 +19,7 @@ public class SplashScreen extends AppCompatActivity {
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
-                Intent intent=new Intent(SplashScreen.this, MainActivity.class);
+                Intent intent=new Intent(SplashActivity.this, MainActivity.class);
                 startActivity(intent);
             }
         },3000);

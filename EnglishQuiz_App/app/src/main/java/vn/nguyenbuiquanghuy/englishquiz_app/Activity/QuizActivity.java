@@ -172,7 +172,7 @@ public class QuizActivity extends AppCompatActivity {
         countDownTimer = new CountDownTimer(TIMER_DURATION, 1000) {
             @Override
             public void onTick(long millisUntilFinished) {
-                tvTimer.setText("Time left: " + millisUntilFinished +1 / 1000 + "s");
+                tvTimer.setText("Time left: " + millisUntilFinished/ 1000 + "s");
             }
 
             @Override
@@ -192,7 +192,6 @@ public class QuizActivity extends AppCompatActivity {
         for (int i = 0; i < count; i++) {
             randomQuestions.add(shuffledList.get(i));
         }
-
         return randomQuestions;
     }
 
@@ -203,10 +202,8 @@ public class QuizActivity extends AppCompatActivity {
        Questions currentQuestion = questionList.get(currentQuestionIndex);
         String correctAnswer = currentQuestion.getAnswer();
 
-
         String selectedAnswer = "";
         int selectedOptionId = rgOptions.getCheckedRadioButtonId();
-
         if (selectedOptionId == rbOption1.getId()) {
           selectedAnswer = rbOption1.getText().toString();
        } else if (selectedOptionId == rbOption2.getId()) {

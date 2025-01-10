@@ -124,7 +124,7 @@
     <LinearLayout
         android:id="@+id/btn_E"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:orientation="horizontal"
         android:paddingTop="16dp">
 
