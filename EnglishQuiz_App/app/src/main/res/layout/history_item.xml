@@ -1,26 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- item_history.xml -->
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:orientation="horizontal"
-    android:padding="8dp"
-    android:background="?android:attr/selectableItemBackground">
+    android:orientation="vertical"
+    android:padding="8dp">
 
     <TextView
-        android:id="@+id/tvHistoryTopic"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:text="Tên chủ đề"
-        android:textSize="16sp"/>
-
-    <TextView
-        android:id="@+id/tvHistoryDate"
+        android:id="@+id/tv_topic"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Ngày giờ"
-        android:textSize="14sp"/>
+        android:text="Chủ đề"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tv_correct_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Số câu đúng" />
+
+    <TextView
+        android:id="@+id/tv_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ngày làm bài"
+        android:textStyle="italic" />
 </LinearLayout>
 

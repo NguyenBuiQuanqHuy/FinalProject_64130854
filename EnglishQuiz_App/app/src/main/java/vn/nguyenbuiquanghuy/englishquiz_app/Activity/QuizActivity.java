@@ -24,6 +24,7 @@ import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.List;
 
+import vn.nguyenbuiquanghuy.englishquiz_app.HistoryDatabase;
 import vn.nguyenbuiquanghuy.englishquiz_app.Model.Questions;
 import vn.nguyenbuiquanghuy.englishquiz_app.R;
 
@@ -222,6 +223,7 @@ public class QuizActivity extends AppCompatActivity {
             currentQuestionIndex++;
             displayQuestion(currentQuestionIndex);
         } else {
+            saveHistory(tvTopic.getText().toString(), correctAnswers.size(), questionList.size());
             // Chuyển sang màn hình kết quả
             Intent intent = new Intent(QuizActivity.this, ResultActivity.class);
             intent.putStringArrayListExtra("questions", (ArrayList<String>) questions);
@@ -231,5 +233,12 @@ public class QuizActivity extends AppCompatActivity {
             startActivity(intent);
             finish();
         }
+    }
+
+    private void saveHistory(String topic, int correctCount, int totalQuestions) {
+        HistoryDatabase dbHelper = new HistoryDatabase(this);
+        String currentDate = new java.text.SimpleDateFormat("yyyy-MM-dd HH:mm:ss")
+                .format(new java.util.Date());
+        dbHelper.addHistory(topic, correctCount, totalQuestions, currentDate);
     }
 }
