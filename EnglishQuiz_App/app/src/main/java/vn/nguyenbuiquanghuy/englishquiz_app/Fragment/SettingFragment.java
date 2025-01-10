@@ -33,6 +33,8 @@ public class SettingFragment extends Fragment {
         btnQuesPlus=view.findViewById(R.id.btnQuestionsPlus);
         btnSave=view.findViewById(R.id.btnSave);
 
+        loadSettings();
+
         // Thiết lập sự kiện cho nút giảm thời gian
         btnTimeMinus.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -87,12 +89,19 @@ public class SettingFragment extends Fragment {
         }
     }
 
+    private void loadSettings() {
+        SharedPreferences preferences = getContext().getSharedPreferences("QuizSettings", MODE_PRIVATE);
+        int time = preferences.getInt("timeLimit", 30);  // Giá trị mặc định là 30 giây
+        int questions = preferences.getInt("numberOfQuestions", 10);  // Giá trị mặc định là 10 câu hỏi
+
+        edTime.setText(String.valueOf(time));
+        edQues.setText(String.valueOf(questions));
+    }
+
     // Phương thức lưu cài đặt
     private void saveSettings() {
         String time = edTime.getText().toString();
         String questions = edQues.getText().toString();
-
-        // Kiểm tra và lưu vào SharedPreferences
         SharedPreferences preferences = getContext().getSharedPreferences("QuizSettings", MODE_PRIVATE);
         SharedPreferences.Editor editor = preferences.edit();
         editor.putInt("timeLimit", Integer.parseInt(time));  // Thời gian trong giây
