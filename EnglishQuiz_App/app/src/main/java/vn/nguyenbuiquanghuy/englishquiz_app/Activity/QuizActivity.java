@@ -172,7 +172,7 @@ public class QuizActivity extends AppCompatActivity {
         countDownTimer = new CountDownTimer(TIMER_DURATION, 1000) {
             @Override
             public void onTick(long millisUntilFinished) {
-                tvTimer.setText("Time left: " + millisUntilFinished / 1000 + "s");
+                tvTimer.setText("Time left: " + millisUntilFinished +1 / 1000 + "s");
             }
 
             @Override

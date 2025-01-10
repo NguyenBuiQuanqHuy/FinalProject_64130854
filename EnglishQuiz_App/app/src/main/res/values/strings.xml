@@ -10,6 +10,18 @@
     <string name="next">Next</string>
     <string name="previous">Previous</string>
 
+
+    <string-array name="languages">
+        <item>English</item>
+        <item>Vietnamese</item>
+    </string-array>
+    <string name="select_language">Select Language</string>
+    <string name="time">Time(s)</string>
+    <string name="questions">Questions</string>
+    <string name="save">Save</string>
+
+
+
     <string name="lorem_ipsum">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam in scelerisque sem. Mauris
         volutpat, dolor id interdum ullamcorper, risus dolor egestas lectus, sit amet mattis purus

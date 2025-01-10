@@ -40,7 +40,7 @@
         android:layout_marginBottom="12dp"
         android:gravity="center"
         android:padding="8dp"
-        android:text="Time left: 10s"
+        android:text="Time left: 11s"
         android:textColor="#FF0000"
         android:textSize="18sp"
         android:textStyle="bold" />
