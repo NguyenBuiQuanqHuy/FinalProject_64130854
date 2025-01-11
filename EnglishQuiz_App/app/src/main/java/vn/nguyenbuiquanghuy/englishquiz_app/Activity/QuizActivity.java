@@ -9,22 +9,20 @@ import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.Toast;
-
 import androidx.appcompat.app.AppCompatActivity;
-import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.database.FirebaseDatabase;
-
 import org.json.JSONException;
 import org.json.JSONObject;
-
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
+import java.util.Locale;
 
-import vn.nguyenbuiquanghuy.englishquiz_app.HistoryDatabase;
+import vn.nguyenbuiquanghuy.englishquiz_app.Database.HistoryDatabase;
 import vn.nguyenbuiquanghuy.englishquiz_app.Model.Questions;
 import vn.nguyenbuiquanghuy.englishquiz_app.R;
 
@@ -38,11 +36,9 @@ public class QuizActivity extends AppCompatActivity {
     List<String> questions = new ArrayList<>();
     List<String> correctAnswers = new ArrayList<>();
     List<String> selectedAnswers = new ArrayList<>();
-    DatabaseReference questionRef;
     CountDownTimer countDownTimer;
     int TIMER_DURATION;
     int NUMBER_OF_QUESTIONS;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -66,8 +62,6 @@ public class QuizActivity extends AppCompatActivity {
         rbOption4 = findViewById(R.id.rb_result4);
         btnNext = findViewById(R.id.btn_next);
         btnExit =findViewById(R.id.btn_exit);
-        FirebaseDatabase database = FirebaseDatabase.getInstance();
-        questionRef = database.getReference("questions").child(topic);
 
         loadQuestionsFromJson(topic);
 
@@ -223,6 +217,24 @@ public class QuizActivity extends AppCompatActivity {
             currentQuestionIndex++;
             displayQuestion(currentQuestionIndex);
         } else {
+            int score = 0;
+            for (int i = 0; i < correctAnswers.size(); i++) {
+                if (correctAnswers.get(i).equals(selectedAnswers.get(i))) {
+                    score++;
+                }
+            }
+
+            HistoryDatabase dbHelper = new HistoryDatabase(this);
+            String topic = tvTopic.getText().toString();
+            String dateTime = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss", Locale.getDefault()).format(new Date()); // Lấy thời gian hiện tại
+
+            long resultId = dbHelper.insertQuizResult(topic, score, correctAnswers.size(), dateTime);
+            if (resultId != -1) {
+                Toast.makeText(this, "Result is saved", Toast.LENGTH_SHORT).show();
+            } else {
+                Toast.makeText(this, "Result is not saved", Toast.LENGTH_SHORT).show();
+            }
+
             Intent intent = new Intent(QuizActivity.this, ResultActivity.class);
             intent.putStringArrayListExtra("questions", (ArrayList<String>) questions);
             intent.putStringArrayListExtra("correctAnswers", (ArrayList<String>) correctAnswers);

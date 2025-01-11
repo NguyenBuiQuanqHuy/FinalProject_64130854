@@ -7,22 +7,23 @@
 
     <TextView
         android:id="@+id/tv_topic"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Chủ đề"
+        android:text="Grade"
+        android:textSize="16sp"
         android:textStyle="bold" />
 
     <TextView
-        android:id="@+id/tv_correct_count"
-        android:layout_width="wrap_content"
+        android:id="@+id/tv_score"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Số câu đúng" />
+        android:text="Score" />
 
     <TextView
-        android:id="@+id/tv_date"
-        android:layout_width="wrap_content"
+        android:id="@+id/tv_date_time"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Ngày làm bài"
-        android:textStyle="italic" />
+        android:text="DateTime" />
 </LinearLayout>
+
 

@@ -18,7 +18,7 @@ import com.google.android.material.navigation.NavigationView;
 
 import vn.nguyenbuiquanghuy.englishquiz_app.Fragment.HomeFragment;
 import vn.nguyenbuiquanghuy.englishquiz_app.Fragment.SettingFragment;
-import vn.nguyenbuiquanghuy.englishquiz_app.Fragment.ProfileFragment;
+import vn.nguyenbuiquanghuy.englishquiz_app.Fragment.HistoryFragment;
 import vn.nguyenbuiquanghuy.englishquiz_app.R;
 
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
@@ -53,7 +53,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             getSupportFragmentManager().beginTransaction().replace(R.id.fragment_layout, new SettingFragment()).commit();
         } else if (item.getItemId() == R.id.nav_profile) {
 
-            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_layout, new ProfileFragment()).commit();
+            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_layout, new HistoryFragment()).commit();
         } else if (item.getItemId() == R.id.nav_logout) {
             new AlertDialog.Builder(this)
                     .setTitle("Thoát")

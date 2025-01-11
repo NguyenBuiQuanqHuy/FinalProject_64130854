@@ -6,20 +6,20 @@
     android:padding="16dp">
 
     <TextView
-        android:id="@+id/tv_history_title"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Lịch sử làm bài"
+        android:text="Lịch sử bài kiểm tra"
         android:textSize="18sp"
         android:textStyle="bold"
-        android:layout_gravity="center"/>
+        android:gravity="center"
+        android:padding="8dp" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv_history"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginTop="8dp" />
+        android:layout_height="match_parent" />
 </LinearLayout>
+
 
 
 
