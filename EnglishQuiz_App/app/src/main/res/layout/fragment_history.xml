@@ -8,8 +8,8 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Lịch sử bài kiểm tra"
-        android:textSize="18sp"
+        android:text="History"
+        android:textSize="35dp"
         android:textStyle="bold"
         android:gravity="center"
         android:padding="8dp" />
