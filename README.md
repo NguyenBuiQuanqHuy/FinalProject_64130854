@@ -7,7 +7,7 @@ Lưu bài dự án cuối kỳ Android Project
 # Màn hình kết quả
 ![image](https://github.com/user-attachments/assets/a431dd61-81b9-4134-8312-c085720bd728)
 # Màn hình cài đặt 
-![image](https://github.com/user-attachments/assets/bc0bb2c5-970b-48ac-9e63-4c79f3ed1ac0)
+![image](https://github.com/user-attachments/assets/d5db2970-7678-43dd-86ec-d4ef920a310e)
 # Màn hình lịch sử làm bài
 ![image](https://github.com/user-attachments/assets/74f9981b-ca2c-4eb8-8b77-57094a4262b6)
 
