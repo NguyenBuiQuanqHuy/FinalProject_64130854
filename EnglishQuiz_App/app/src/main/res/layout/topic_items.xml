@@ -12,9 +12,9 @@
         android:layout_height="wrap_content"
         android:gravity="center_vertical"
         android:orientation="horizontal"
+        android:background="#fffcdb"
         android:padding="16dp">
 
-        <!-- Hình ảnh chủ đề -->
         <ImageView
             android:id="@+id/img_topic"
             android:layout_width="100dp"
@@ -25,7 +25,6 @@
             app:srcCompat="@drawable/bird"
             android:layout_gravity="center"/>
 
-        <!-- Tên chủ đề -->
         <TextView
             android:id="@+id/tv_topic_name"
             android:layout_width="0dp"
