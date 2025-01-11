@@ -56,13 +56,13 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             getSupportFragmentManager().beginTransaction().replace(R.id.fragment_layout, new HistoryFragment()).commit();
         } else if (item.getItemId() == R.id.nav_logout) {
             new AlertDialog.Builder(this)
-                    .setTitle("Thoát")
-                    .setMessage("Bạn có chắc chắn muốn thoát ứng dụng?")
-                    .setPositiveButton("Có", (dialog, which) -> {
+                    .setTitle("Exit")
+                    .setMessage("Are you sure you want to exit the application?")
+                    .setPositiveButton("Yes", (dialog, which) -> {
                         finishAffinity();
                         System.exit(0);
                     })
-                    .setNegativeButton("Không", null)
+                    .setNegativeButton("No", null)
                     .show();
         }
         drawerLayout.closeDrawer(GravityCompat.START);

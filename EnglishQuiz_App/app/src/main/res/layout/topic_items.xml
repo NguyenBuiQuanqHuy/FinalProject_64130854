@@ -2,37 +2,41 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_marginBottom="10dp"
-    app:cardBackgroundColor="#fffcdb"
-    app:cardCornerRadius="12dp"
-    app:cardElevation="6dp">
+    android:layout_marginBottom="16dp"
+    app:cardBackgroundColor="#FFFFFF"
+    app:cardCornerRadius="16dp"
+    app:cardElevation="8dp">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center_vertical"
         android:orientation="horizontal"
-        android:padding="12dp">
+        android:padding="16dp">
 
+        <!-- Hình ảnh chủ đề -->
         <ImageView
             android:id="@+id/img_topic"
-            android:layout_width="130dp"
-            android:layout_height="113dp"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginEnd="16dp"
             android:background="@android:color/transparent"
-            android:scaleType="fitXY"
-            app:srcCompat="@drawable/bird" />
+            android:scaleType="centerCrop"
+            app:srcCompat="@drawable/bird"
+            android:layout_gravity="center"/>
 
+        <!-- Tên chủ đề -->
         <TextView
             android:id="@+id/tv_topic_name"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:gravity="center"
-            android:text="FIRST GRADE"
+            android:text="First Grade"
             android:textAlignment="center"
-            android:textColor="#000000"
+            android:textColor="#333333"
             android:textSize="30sp"
-            android:textStyle="bold" />
+            android:textStyle="bold"/>
 
     </LinearLayout>
 </androidx.cardview.widget.CardView>
