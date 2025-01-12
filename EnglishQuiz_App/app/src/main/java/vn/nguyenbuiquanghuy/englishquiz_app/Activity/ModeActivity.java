@@ -1,4 +1,4 @@
-package vn.nguyenbuiquanghuy.englishquiz_app;
+package vn.nguyenbuiquanghuy.englishquiz_app.Activity;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -7,11 +7,8 @@ import android.widget.Button;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
 
-import vn.nguyenbuiquanghuy.englishquiz_app.Activity.QuizActivity;
+import vn.nguyenbuiquanghuy.englishquiz_app.R;
 
 public class ModeActivity extends AppCompatActivity {
     Button btnExam, btnPractice;

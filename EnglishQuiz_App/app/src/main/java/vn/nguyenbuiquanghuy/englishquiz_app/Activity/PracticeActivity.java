@@ -1,4 +1,4 @@
-package vn.nguyenbuiquanghuy.englishquiz_app;
+package vn.nguyenbuiquanghuy.englishquiz_app.Activity;
 
 import android.os.Bundle;
 
@@ -20,9 +20,9 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.List;
-import vn.nguyenbuiquanghuy.englishquiz_app.Activity.MainActivity;
-import vn.nguyenbuiquanghuy.englishquiz_app.Activity.ResultActivity;
+
 import vn.nguyenbuiquanghuy.englishquiz_app.Model.Questions;
+import vn.nguyenbuiquanghuy.englishquiz_app.R;
 
 public class PracticeActivity extends AppCompatActivity {
 
@@ -82,7 +82,6 @@ public class PracticeActivity extends AppCompatActivity {
                         selectedAnswer = rbOption4.getText().toString();
                     }
 
-                    // Tô màu đáp án đúng hoặc sai ngay lập tức
                     highlightAnswer(selectedAnswer, correctAnswer);
                 }
             }
@@ -177,7 +176,6 @@ public class PracticeActivity extends AppCompatActivity {
     }
 
 
-    // Phương thức để lấy 5 câu hỏi ngẫu nhiên
     private List<Questions> getRandomQuestions(int count) {
         List<Questions> randomQuestions = new ArrayList<>();
         List<Questions> shuffledList = new ArrayList<>(questionList);
@@ -203,7 +201,6 @@ public class PracticeActivity extends AppCompatActivity {
         } else if (selectedOptionId == rbOption4.getId()) {
             selectedAnswer = rbOption4.getText().toString();
         }
-        // Lưu câu hỏi, đáp án đúng, và đáp án đã chọn
         questions.add(currentQuestion.getQuestion());
         correctAnswers.add(correctAnswer);
         selectedAnswers.add(selectedAnswer);
@@ -213,7 +210,7 @@ public class PracticeActivity extends AppCompatActivity {
             currentQuestionIndex++;
             displayQuestion(currentQuestionIndex);
         } else {
-            Intent intent = new Intent(PracticeActivity.this, ResultActivity.class);
+            Intent intent = new Intent(PracticeActivity.this, ResultPractice.class);
             intent.putStringArrayListExtra("questions", (ArrayList<String>) questions);
             intent.putStringArrayListExtra("correctAnswers", (ArrayList<String>) correctAnswers);
             intent.putStringArrayListExtra("selectedAnswers", (ArrayList<String>) selectedAnswers);
@@ -224,7 +221,6 @@ public class PracticeActivity extends AppCompatActivity {
     }
 
     private void highlightAnswer(String selectedAnswer, String correctAnswer) {
-        // Tô màu đáp án đúng
         if (selectedAnswer.equals(correctAnswer)) {
             if (selectedAnswer.equals(rbOption1.getText().toString())) {
                 rbOption1.setBackgroundColor(getResources().getColor(android.R.color.holo_green_light));
@@ -236,7 +232,6 @@ public class PracticeActivity extends AppCompatActivity {
                 rbOption4.setBackgroundColor(getResources().getColor(android.R.color.holo_green_light));
             }
         } else {
-            // Tô màu đáp án sai
             if (selectedAnswer.equals(rbOption1.getText().toString())) {
                 rbOption1.setBackgroundColor(getResources().getColor(android.R.color.holo_red_light));
             } else if (selectedAnswer.equals(rbOption2.getText().toString())) {
@@ -247,7 +242,6 @@ public class PracticeActivity extends AppCompatActivity {
                 rbOption4.setBackgroundColor(getResources().getColor(android.R.color.holo_red_light));
             }
 
-            // Tô màu đáp án đúng nếu người dùng chọn sai
             if (correctAnswer.equals(rbOption1.getText().toString())) {
                 rbOption1.setBackgroundColor(getResources().getColor(android.R.color.holo_green_light));
             } else if (correctAnswer.equals(rbOption2.getText().toString())) {
@@ -260,7 +254,6 @@ public class PracticeActivity extends AppCompatActivity {
         }
     }
 
-    //Đặt màu mặc định
     private void resetAnswerColors() {
         rbOption1.setBackgroundColor(getResources().getColor(android.R.color.transparent));
         rbOption2.setBackgroundColor(getResources().getColor(android.R.color.transparent));
