@@ -15,6 +15,9 @@
         android:theme="@style/Theme.EnglishQuiz_App"
         tools:targetApi="31">
         <activity
+            android:name=".PracticeActivity"
+            android:exported="false" />
+        <activity
             android:name=".Activity.ModeActivity"
             android:exported="false" />
         <activity

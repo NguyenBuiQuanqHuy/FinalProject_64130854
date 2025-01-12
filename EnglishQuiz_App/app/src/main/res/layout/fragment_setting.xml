@@ -63,7 +63,7 @@
 
                 <EditText
                     android:id="@+id/edTime"
-                    android:layout_width="100dp"
+                    android:layout_width="50dp"
                     android:layout_height="wrap_content"
                     android:background="@android:color/darker_gray"
                     android:gravity="center"
@@ -133,7 +133,7 @@
 
                 <EditText
                     android:id="@+id/edQuestions"
-                    android:layout_width="100dp"
+                    android:layout_width="50dp"
                     android:layout_height="wrap_content"
                     android:background="@android:color/darker_gray"
                     android:gravity="center"
