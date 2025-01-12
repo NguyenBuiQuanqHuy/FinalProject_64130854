@@ -18,6 +18,9 @@
             android:name=".PracticeActivity"
             android:exported="false" />
         <activity
+            android:name=".ModeActivity"
+            android:exported="false" />
+        <activity
             android:name=".Activity.ModeActivity"
             android:exported="false" />
         <activity
