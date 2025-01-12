@@ -47,7 +47,7 @@ public class ResultActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent= new Intent(ResultActivity.this, QuizActivity.class);
-                intent.putExtra("topic", topic); // Gửi lại chủ đề đã chọn
+                intent.putExtra("topic", topic); 
                 startActivity(intent);
                 finish();
             }

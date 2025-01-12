@@ -6,7 +6,6 @@
     android:orientation="vertical"
     android:padding="24dp">
 
-    <!-- Tiêu đề với hình ảnh -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -32,7 +31,6 @@
             android:textStyle="bold" />
     </LinearLayout>
 
-    <!-- Thời gian đếm ngược -->
     <TextView
         android:id="@+id/tv_timer"
         android:layout_width="match_parent"
@@ -45,7 +43,6 @@
         android:textSize="18sp"
         android:textStyle="bold" />
 
-    <!-- Tiêu đề câu hỏi -->
     <TextView
         android:id="@+id/tv_results"
         android:layout_width="match_parent"
@@ -59,7 +56,6 @@
         android:textSize="20sp"
         android:textStyle="bold" />
 
-    <!-- Các lựa chọn câu trả lời -->
     <RadioGroup
         android:id="@+id/rg_results"
         android:layout_width="match_parent"
@@ -69,7 +65,6 @@
         android:orientation="vertical"
         android:padding="8dp">
 
-        <!-- Option 1 -->
         <RadioButton
             android:id="@+id/rb_result1"
             android:layout_width="match_parent"
@@ -81,7 +76,6 @@
             android:textColor="#333333"
             android:textSize="16sp" />
 
-        <!-- Option 2 -->
         <RadioButton
             android:id="@+id/rb_result2"
             android:layout_width="match_parent"
@@ -93,7 +87,6 @@
             android:textColor="#333333"
             android:textSize="16sp" />
 
-        <!-- Option 3 -->
         <RadioButton
             android:id="@+id/rb_result3"
             android:layout_width="match_parent"
@@ -105,7 +98,6 @@
             android:textColor="#333333"
             android:textSize="16sp" />
 
-        <!-- Option 4 -->
         <RadioButton
             android:id="@+id/rb_result4"
             android:layout_width="match_parent"
@@ -118,9 +110,6 @@
             android:textSize="16sp" />
     </RadioGroup>
 
-    <!-- Nút Next -->
-
-    <!-- Hai nút ngang hàng -->
     <LinearLayout
         android:id="@+id/btn_E"
         android:layout_width="match_parent"
