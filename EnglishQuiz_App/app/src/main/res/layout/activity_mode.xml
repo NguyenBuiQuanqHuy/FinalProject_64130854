@@ -9,16 +9,15 @@
     android:gravity="center"
     android:background="#fffcdb"
     android:orientation="vertical"
-    tools:context=".ModeActivity">
+    tools:context=".Activity.ModeActivity">
 
     <!-- CardView cho nút chế độ ôn tập -->
     <androidx.cardview.widget.CardView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="16dp"
-        android:cardElevation="15dp"
-        android:cardBackgroundColor="@color/yellow"
-        app:cardCornerRadius="16dp">
+        app:cardCornerRadius="16dp"
+        app:cardElevation="15dp">
 
         <Button
             android:id="@+id/btn_practice_mode"
@@ -35,9 +34,8 @@
     <androidx.cardview.widget.CardView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:cardElevation="15dp"
-        android:cardBackgroundColor="@color/yellow"
-        app:cardCornerRadius="16dp">
+        app:cardCornerRadius="16dp"
+        app:cardElevation="15dp">
 
         <Button
             android:id="@+id/btn_exam_mode"

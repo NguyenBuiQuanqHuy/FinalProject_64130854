@@ -10,9 +10,8 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 import java.util.ArrayList;
 
-import vn.nguyenbuiquanghuy.englishquiz_app.ModeActivity;
+import vn.nguyenbuiquanghuy.englishquiz_app.Activity.ModeActivity;
 import vn.nguyenbuiquanghuy.englishquiz_app.Model.Topic;
-import vn.nguyenbuiquanghuy.englishquiz_app.Activity.QuizActivity;
 import vn.nguyenbuiquanghuy.englishquiz_app.R;
 
 
