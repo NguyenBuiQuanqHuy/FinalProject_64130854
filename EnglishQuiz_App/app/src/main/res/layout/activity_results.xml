@@ -89,23 +89,23 @@
         android:paddingTop="16dp">
 
         <Button
-            android:id="@+id/btn_retry"
+            android:id="@+id/btn_exit"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginEnd="8dp"
             android:layout_weight="1"
             android:background="@drawable/rounded_border_button"
-            android:text="Retry"
+            android:text="Exit"
             android:textColor="@color/black" />
 
         <Button
-            android:id="@+id/btn_exit"
+            android:id="@+id/btn_retry"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
             android:layout_weight="1"
             android:background="@drawable/rounded_border_button"
-            android:text="Exit"
+            android:text="Retry"
             android:textColor="@color/black" />
     </LinearLayout>
 </LinearLayout>

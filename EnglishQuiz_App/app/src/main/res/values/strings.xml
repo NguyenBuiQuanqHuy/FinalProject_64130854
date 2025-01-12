@@ -11,14 +11,7 @@
     <string name="previous">Previous</string>
 
 
-    <string-array name="languages">
-        <item>English</item>
-        <item>Vietnamese</item>
-    </string-array>
-    <string name="select_language">Select Language</string>
-    <string name="time">Time(s)</string>
-    <string name="questions">Questions</string>
-    <string name="save">Save</string>
+
 
 
     <string name="lorem_ipsum">
